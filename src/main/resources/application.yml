@@ -8,22 +8,24 @@ kai:
   threadName: CUSTINFO_API
   pollSize: 100
   error:
-    code999: "Internal Server Error {0}"
-    code998: "Timeout {0}"
-    code701: "API not exist"
-    code700: "API key not exists"
-    code803: "RequestId not exist"
     code996: "Error insert request to DB#{0}"
+    code997: "Cannot be processed"
+    code998: "Timeout {0}"
+    code999: "Internal Server Error {0}"
+    code801: "Request type not valid"
+    code802: "Problem with calculating timeout or sendtime in request type 'response'"
+    code803: "RequestId not exist"
+    code804: "Request lacks valid information: {0}"
+    code805: "Problem with command in request type 'request'"
+    code700: "API key not exists"
+    code701: "API not exist"
+    code600: "Problem in mapper object"
+    code333: "Don't have method validate for AuthenType"
 spring:
   application:
-    name: KAIASIA_DEMO
+    name: KAIASIA_CUSTOMERINFO
   database:
     postgres: true
-  custinfo_api:
-    url:
-    getName:
-    getKey:
-    timeout:
   postgredatasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://14.225.254.212:5432/KAI_API?currentSchema=customerinfo_api
@@ -39,3 +41,15 @@ spring:
 dbinfo:
   apiRequest: request_in
   apiResponse: request_out
+
+dex-api:
+  t24utilsApi:
+    apiName: T24UTILS_API
+    url: http://localhost:8025/T24UTILS_API/process
+    timeout: 60000
+    apiKey: T24utils51klfoni1ezxl5f2ckpfx248
+  authApi:
+    apiName: AUTH_API
+    url: http://localhost:8059/AUTH_API/process
+    timeout: 60000
+    apiKey: authq51klfoni1ezxl5f2ckpfx248
