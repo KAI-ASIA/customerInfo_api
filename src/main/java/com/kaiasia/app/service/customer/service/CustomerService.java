@@ -64,6 +64,37 @@ public class CustomerService {
         String userId = (String) requestCustomer.get("userID");
         String cacheKey = "userProfile:" + sessionId + ":" + userId;
 
+        // Kiểm tra Auth bằng Auth-1
+        String location = "AuthAPI/validateSession/" + sessionId + "/" + System.currentTimeMillis();
+        DepApiProperties authApiProperties = depApiConfig.getAuthApi();
+        HashMap<String, Object> authRequestEnquiry = new HashMap<>();
+        authRequestEnquiry.put("authenType", "takeSession");
+        authRequestEnquiry.put("sessionId", sessionId);
+
+        ApiRequest authRequest = kaiApiRequestBuilderFactory.getBuilder()
+                .api(authApiProperties.getApiName())
+                .apiKey(authApiProperties.getApiKey())
+                .bodyProperties("command", "GET_ENQUIRY")
+                .bodyProperties("enquiry", authRequestEnquiry)
+                .build();
+
+        String username = "";
+        try {
+            ApiResponse authResponse = ApiCallHelper.call(authApiProperties.getUrl(), HttpMethod.POST, ObjectAndJsonUtils.toJson(authRequest), ApiResponse.class);
+            error = authResponse.getError();
+            if (error != null || !"OK".equals(authResponse.getBody().get("status"))) {
+                log.error("{}: Auth failed with error - {}", location, error.getCode());
+                response.setError(error);
+                return response;
+            }
+            username = (String) ((HashMap) authResponse.getBody().get("enquiry")).get("username");
+            log.info("Auth-1 validated successfully for username: {}", username);
+        } catch (Exception e) {
+            log.error("{}: Exception while calling Auth-1 - {}", location, e.getMessage());
+            response.setError(apiErrorUtils.getError("999", new String[]{e.getMessage()}));
+            return response;
+        }
+
         // Kiểm tra cache trước
         ApiResponse cachedResponse = getCachedUserProfile(cacheKey);
         if (cachedResponse != null) {
@@ -72,7 +103,7 @@ public class CustomerService {
         }
 
         // Nếu không có trong cache, gọi API T24
-        String location = "CustomerInfo/" + sessionId + "/" + System.currentTimeMillis();
+        location = "CustomerInfo/" + sessionId + "/" + System.currentTimeMillis();
         DepApiProperties t24ApiProperties = depApiConfig.getAuthApi();
         HashMap<String, Object> t24Request = new HashMap<>();
         t24Request.put("userID", userId);
@@ -89,7 +120,7 @@ public class CustomerService {
             ApiResponse t24ApiRes = ApiCallHelper.call(t24ApiProperties.getUrl(), HttpMethod.POST, ObjectAndJsonUtils.toJson(t24ApiReq), ApiResponse.class);
             error = t24ApiRes.getError();
             if (error != null || !"OK".equals(t24ApiRes.getBody().get("status"))) {
-                log.error("{}:{}", location + "#After call T24", error);
+                log.error("{}: T24 API failed with error - {}", location, error.getCode());
                 response.setError(error);
                 return response;
             }
@@ -104,7 +135,7 @@ public class CustomerService {
             cacheUserProfile(cacheKey, response);
 
         } catch (Exception e) {
-            log.error("{}:{}", location + "#Calling T24", e.getMessage());
+            log.error("{}: Exception while calling T24 API - {}", location, e.getMessage());
             error = apiErrorUtils.getError("999", new String[]{e.getMessage()});
             response.setError(error);
             return response;
@@ -112,7 +143,6 @@ public class CustomerService {
 
         return response;
     }
-
     private ApiResponse getCachedUserProfile(String cacheKey) {
         try {
             Object cachedData = redisTemplate.opsForValue().get(cacheKey);

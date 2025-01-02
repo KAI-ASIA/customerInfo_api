@@ -27,7 +27,7 @@ public class RedisConfig {
 
     @Bean
     public RedisConnectionFactory redisConnectionFactory() {
-        // Sử dụng Lettuce thay vì Jedis để tương thích với Java 8
+        // Sử dụng Lettuce với Java 8
         RedisStandaloneConfiguration configuration = new RedisStandaloneConfiguration(redisHost, redisPort);
         LettuceConnectionFactory connectionFactory = new LettuceConnectionFactory(configuration);
 
