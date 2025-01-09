@@ -15,4 +15,5 @@ import lombok.*;
 public class Auth1In {
     private String authenType;
     private String sessionId;
+
 }

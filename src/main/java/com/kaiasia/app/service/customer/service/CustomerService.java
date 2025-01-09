@@ -6,10 +6,7 @@ import com.kaiasia.app.core.utils.GetErrorUtils;
 import com.kaiasia.app.register.KaiMethod;
 import com.kaiasia.app.register.KaiService;
 import com.kaiasia.app.register.Register;
-import com.kaiasia.app.service.customer.configuration.DepApiConfig;
-import com.kaiasia.app.service.customer.configuration.KaiApiRequestBuilderFactory;
 import com.kaiasia.app.service.customer.exception.ExceptionHandler;
-import com.kaiasia.app.service.customer.exception.UpdateFailedException;
 import com.kaiasia.app.service.customer.model.request.CustomerIn;
 import com.kaiasia.app.service.customer.model.response.Auth1Out;
 import com.kaiasia.app.service.customer.model.response.BaseResponse;
@@ -38,7 +35,9 @@ import java.util.concurrent.TimeUnit;
 @RequiredArgsConstructor
 public class CustomerService {
     private final GetErrorUtils apiErrorUtils;
+    @Autowired
     private final RedisTemplate<String, Object> redisTemplate;
+    @Autowired
     private final T24UtilClient t24UtilClient;
     private final ExceptionHandler exceptionHandler;
     private final AuthenClient authenClient;
@@ -101,10 +100,17 @@ public class CustomerService {
             // Call T24 API
             T24CustomerInfoResponse t24CustomerInfoResponse = t24UtilClient.getCustomerInfo(location,
                     T24Request.builder()
-                            .customerId(requestData.getCustomerID())
+//                            .customerId(requestData.getCustomerID()
+                            .customerId("281692")
                             .build(),
                     request.getHeader());
             log.warn("{}{}", t24CustomerInfoResponse.getId(), t24CustomerInfoResponse.getCifName());
+            System.out.println(t24CustomerInfoResponse.getId());
+            System.out.println(t24CustomerInfoResponse.getCifName());
+            System.out.println(t24CustomerInfoResponse.getCustomerType());
+            System.out.println(t24CustomerInfoResponse.getAddress());
+            System.out.println(t24CustomerInfoResponse.getCountry());
+            System.out.println(t24CustomerInfoResponse.getEmail());
 
             HashMap<String, Object> params = new HashMap<>();
             // Kiểm tra kết quả trả về đủ field không.
@@ -129,7 +135,7 @@ public class CustomerService {
             params.put("customerType", t24CustomerInfoResponse.getCustomerType());
             params.put("customerStatus", t24CustomerInfoResponse.getCifStatus());
 
-            header.setReqType("RESPONSE");
+//            header.setReqType("RESPONSE");
             body.put("enquiry", params);
             response.setBody(body);
 
