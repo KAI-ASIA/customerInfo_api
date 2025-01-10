@@ -55,15 +55,6 @@ public class CustomerService {
                 .get("enquiry"), CustomerIn.class);
         String location = "CustomerInfo-" + requestData.getSessionId() + "-" + System.currentTimeMillis();
 
-        // Tạo cache key
-        String cacheKey = "CustomerInfo:" + requestData.getSessionId() + ":" + requestData.getCustomerID();
-
-        // Kiểm tra cache
-        ApiResponse cachedResponse = getCachedResponse(cacheKey);
-        if (cachedResponse != null) {
-            log.info("Cache hit for customer info: {}", cacheKey);
-            return cachedResponse;
-        }
 
         return exceptionHandler.handle(req -> {
             ApiResponse response = new ApiResponse();
@@ -95,6 +86,16 @@ public class CustomerService {
                 log.error("{}:{}", location + "#After call Auth-1", validateAuth1Error);
                 response.setError(new ApiError(validateAuth1Error.getCode(), validateAuth1Error.getDesc()));
                 return response;
+            }
+
+            // Tạo cache key
+            String cacheKey = "CustomerInfo:" + requestData.getSessionId() + ":" + requestData.getCustomerID();
+
+            // Kiểm tra cache
+            ApiResponse cachedResponse = getCachedResponse(cacheKey);
+            if (cachedResponse != null) {
+                log.info("Cache hit for customer info: {}", cacheKey);
+                return cachedResponse;
             }
 
             // Call T24 API
