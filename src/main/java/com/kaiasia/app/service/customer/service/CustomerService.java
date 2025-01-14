@@ -43,12 +43,12 @@ public class CustomerService {
     private final AuthenClient authenClient;
 
 
-    @KaiMethod(name = "getUSER_PROFILE", type = Register.VALIDATE)
+    @KaiMethod(name = "getCUSTINFO", type = Register.VALIDATE)
     public ApiError validate(ApiRequest req) {
         return ServiceUtils.validate(req, CustomerIn.class, apiErrorUtils, "ENQUIRY");
     }
 
-    @KaiMethod(name = "getUSER_PROFILE")
+    @KaiMethod(name = "getCUSTINFO")
     public ApiResponse process(ApiRequest request) {
         CustomerIn requestData = ObjectAndJsonUtils.fromObject(request
                 .getBody()
