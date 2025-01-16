@@ -28,6 +28,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.client.RestClientException;
 
 import java.util.HashMap;
+import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 @KaiService
@@ -73,12 +74,12 @@ public class CustomerService {
             } catch (Exception e) {
                 throw new RestClientException(location, e);
             }
-
-            if (auth1Response.getError() != null) {
+            if (auth1Response.getError() != null && !ApiError.OK_CODE.equals(auth1Response.getError().getCode())) {
                 log.error("{}:{}", location + "#After call Auth-1", auth1Response.getError());
                 response.setError(auth1Response.getError());
                 return response;
             }
+
 
             // Kiểm tra kết quả trả về đủ field không.
             BaseResponse validateAuth1Error = ServiceUtils.validate(ObjectAndJsonUtils.fromObject(auth1Response, Auth1Out.class), SuccessGroup.class);
@@ -106,12 +107,12 @@ public class CustomerService {
                             .build(),
                     request.getHeader());
             log.warn("{}{}", t24CustomerInfoResponse.getId(), t24CustomerInfoResponse.getCifName());
-            System.out.println(t24CustomerInfoResponse.getId());
-            System.out.println(t24CustomerInfoResponse.getCifName());
-            System.out.println(t24CustomerInfoResponse.getCustomerType());
-            System.out.println(t24CustomerInfoResponse.getAddress());
-            System.out.println(t24CustomerInfoResponse.getCountry());
-            System.out.println(t24CustomerInfoResponse.getEmail());
+
+            if (Objects.nonNull(t24CustomerInfoResponse.getError()) && !ApiError.OK_CODE.equals(t24CustomerInfoResponse.getError().getCode())) {
+                log.error("Error calling T24 API for customer {} (session {}): {}", requestData.getCustomerID(), requestData.getSessionId(), t24CustomerInfoResponse.getError());
+                response.setError(t24CustomerInfoResponse.getError());
+                return response;
+            }
 
             HashMap<String, Object> params = new HashMap<>();
             // Kiểm tra kết quả trả về đủ field không.
