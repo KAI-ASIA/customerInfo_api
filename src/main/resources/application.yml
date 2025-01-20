@@ -1,7 +1,7 @@
 server:
   servlet:
     contextPath: /CUSTOMER_API
-  port: 8080
+  port: 8088
 kai:
   name: CUSTOMER_API
   key: custinfoq51klfoni1ezxl5f2ckpfx671
@@ -55,20 +55,9 @@ dbinfo:
 dep-api:
   auth-api:
     apiName: AUTH_API
-    url: http://localhost:8059/AUTH_API/process
+    url: http://14.225.254.212:8087/AUTH_API/process
     timeout: 60000
     apiKey: authq51klfoni1ezxl5f2ckpfx248
-    authenType:
-      auth-1: takeSession
-      auth-3: confirmOTP
-  t24utils-api:
-    apiName: T24_UTIL_API
-    url: http://14.225.254.212:8082/T24_UTIL_API/process
-    timeout: 60000
-    apiKey: VDI0X1VUSUxfQVBJ
-    authenType:
-      fundtransfer: KAI.API.FT.PROCESS
-      login: KAI.API.GET.LOGIN
   t24utilsApi:
     apiName: T24_UTIL_API
     url: http://14.225.254.212:8082/T24_UTIL_API/process

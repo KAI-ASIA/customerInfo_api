@@ -1,6 +1,5 @@
 package com.kaiasia.app.service.customer.service;//package com.kaiasia.app.service.customer.service;
 
-
 import com.kaiasia.app.core.utils.ApiConstant;
 import com.kaiasia.app.core.utils.GetErrorUtils;
 import com.kaiasia.app.register.KaiMethod;
@@ -18,12 +17,11 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import ms.apiclient.authen.AuthRequest;
 import ms.apiclient.authen.AuthTakeSessionResponse;
-import ms.apiclient.authen.AuthenClient;
+import ms.apiclient.authen.*;
 import ms.apiclient.model.*;
 import ms.apiclient.t24util.T24CustomerInfoResponse;
 import ms.apiclient.t24util.T24Request;
 import ms.apiclient.t24util.T24UtilClient;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.client.RestClientException;
 
@@ -36,9 +34,7 @@ import java.util.concurrent.TimeUnit;
 @RequiredArgsConstructor
 public class CustomerService {
     private final GetErrorUtils apiErrorUtils;
-    @Autowired
     private final RedisTemplate<String, Object> redisTemplate;
-    @Autowired
     private final T24UtilClient t24UtilClient;
     private final ExceptionHandler exceptionHandler;
     private final AuthenClient authenClient;
@@ -75,7 +71,7 @@ public class CustomerService {
                 throw new RestClientException(location, e);
             }
             if (auth1Response.getError() != null && !ApiError.OK_CODE.equals(auth1Response.getError().getCode())) {
-                log.error("{}:{}", location + "#After call Auth-1", auth1Response.getError());
+                log.error("{}:{}", location + " #After call Auth-1", auth1Response.getError());
                 response.setError(auth1Response.getError());
                 return response;
             }
@@ -84,7 +80,7 @@ public class CustomerService {
             // Kiểm tra kết quả trả về đủ field không.
             BaseResponse validateAuth1Error = ServiceUtils.validate(ObjectAndJsonUtils.fromObject(auth1Response, Auth1Out.class), SuccessGroup.class);
             if (!validateAuth1Error.getCode().equals(ApiError.OK_CODE)) {
-                log.error("{}:{}", location + "#After call Auth-1", validateAuth1Error);
+                log.error("{}:{}", location + " #After call Auth-1", validateAuth1Error);
                 response.setError(new ApiError(validateAuth1Error.getCode(), validateAuth1Error.getDesc()));
                 return response;
             }
@@ -102,8 +98,8 @@ public class CustomerService {
             // Call T24 API
             T24CustomerInfoResponse t24CustomerInfoResponse = t24UtilClient.getCustomerInfo(location,
                     T24Request.builder()
-//                            .customerId(requestData.getCustomerID()
-                            .customerId("281692")
+                            .customerId(requestData.getCustomerID())
+//                            .customerId("281692")
                             .build(),
                     request.getHeader());
             log.warn("{}{}", t24CustomerInfoResponse.getId(), t24CustomerInfoResponse.getCifName());
@@ -115,14 +111,6 @@ public class CustomerService {
             }
 
             HashMap<String, Object> params = new HashMap<>();
-            // Kiểm tra kết quả trả về đủ field không.
-            BaseResponse validateT24Error = ServiceUtils.validate(ObjectAndJsonUtils.fromObject(t24CustomerInfoResponse, CustomerOut.class), SuccessGroup.class);
-            if (!validateT24Error.getCode().equals(ApiError.OK_CODE)) {
-                log.error("{}:{}", location + "#After call T2405", validateT24Error);
-                params.put("status", ApiConstant.STATUS.ERROR);
-                return response;
-            }
-
             params.put("customerID", t24CustomerInfoResponse.getId());
             params.put("customerName", t24CustomerInfoResponse.getCifName());
             params.put("legalId", t24CustomerInfoResponse.getLegalId());
@@ -137,7 +125,6 @@ public class CustomerService {
             params.put("customerType", t24CustomerInfoResponse.getCustomerType());
             params.put("customerStatus", t24CustomerInfoResponse.getCifStatus());
 
-//            header.setReqType("RESPONSE");
             body.put("enquiry", params);
             response.setBody(body);
 
