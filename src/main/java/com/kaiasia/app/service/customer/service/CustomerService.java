@@ -60,30 +60,30 @@ public class CustomerService {
             ApiBody body = new ApiBody();
 
             // Call Auth-1 api
-            AuthTakeSessionResponse auth1Response = null;
-            try {
-                auth1Response = authenClient.takeSession(location,
-                        AuthRequest.builder()
-                                .sessionId(requestData.getSessionId())
-                                .build(),
-                        request.getHeader());
-            } catch (Exception e) {
-                throw new RestClientException(location, e);
-            }
-            if (auth1Response.getError() != null && !ApiError.OK_CODE.equals(auth1Response.getError().getCode())) {
-                log.error("{}:{}", location + " #After call Auth-1", auth1Response.getError());
-                response.setError(auth1Response.getError());
-                return response;
-            }
+//            AuthTakeSessionResponse auth1Response = null;
+//            try {
+//                auth1Response = authenClient.takeSession(location,
+//                        AuthRequest.builder()
+//                                .sessionId(requestData.getSessionId())
+//                                .build(),
+//                        request.getHeader());
+//            } catch (Exception e) {
+//                throw new RestClientException(location, e);
+//            }
+//            if (auth1Response.getError() != null && !ApiError.OK_CODE.equals(auth1Response.getError().getCode())) {
+//                log.error("{}:{}", location + " #After call Auth-1", auth1Response.getError());
+//                response.setError(auth1Response.getError());
+//                return response;
+//            }
 
 
-            // Kiểm tra kết quả trả về đủ field không.
-            BaseResponse validateAuth1Error = ServiceUtils.validate(ObjectAndJsonUtils.fromObject(auth1Response, Auth1Out.class), SuccessGroup.class);
-            if (!validateAuth1Error.getCode().equals(ApiError.OK_CODE)) {
-                log.error("{}:{}", location + " #After call Auth-1", validateAuth1Error);
-                response.setError(new ApiError(validateAuth1Error.getCode(), validateAuth1Error.getDesc()));
-                return response;
-            }
+//            // Kiểm tra kết quả trả về đủ field không.
+//            BaseResponse validateAuth1Error = ServiceUtils.validate(ObjectAndJsonUtils.fromObject(auth1Response, Auth1Out.class), SuccessGroup.class);
+//            if (!validateAuth1Error.getCode().equals(ApiError.OK_CODE)) {
+//                log.error("{}:{}", location + " #After call Auth-1", validateAuth1Error);
+//                response.setError(new ApiError(validateAuth1Error.getCode(), validateAuth1Error.getDesc()));
+//                return response;
+//            }
 
             // Tạo cache key
             String cacheKey = "CustomerInfo:" + requestData.getSessionId() + ":" + requestData.getCustomerID();
@@ -149,7 +149,7 @@ public class CustomerService {
 
     private void cacheResponse(String cacheKey, ApiResponse response) {
         try {
-            redisTemplate.opsForValue().set(cacheKey, response, 30, TimeUnit.MINUTES); // Lưu cache trong 30 phút
+            redisTemplate.opsForValue().set(cacheKey,ObjectAndJsonUtils.toJson(response), 30, TimeUnit.MINUTES); // Lưu cache trong 30 phút
             log.info("Customer info cached with key: {}", cacheKey);
         } catch (Exception e) {
             log.error("Error while caching customer info: {}", e.getMessage());
