@@ -1,65 +1,1313 @@
-06-02-2025 14:16:48.824 INFO  --- [com.kaiasia.app.AppApplication          ] - Starting AppApplication using Java 1.8.0_191 on DESKTOP-RJMUS47 with PID 7444 (D:\TT\Bank\customer_api\target\classes started by Truong in D:\TT\Bank\customer_api)
-06-02-2025 14:16:48.832 DEBUG --- [com.kaiasia.app.AppApplication          ] - Running with Spring Boot v2.7.2, Spring v5.3.22
-06-02-2025 14:16:48.833 INFO  --- [com.kaiasia.app.AppApplication          ] - No active profile set, falling back to 1 default profile: "default"
-06-02-2025 14:16:52.590 DEBUG --- [com.kaiasia.app.register.ServiceRegister] - Found 1 classes with annotation SeabService
-06-02-2025 14:16:53.937 INFO  --- [com.kaiasia.app.AppApplication          ] - Started AppApplication in 6.007 seconds (JVM running for 7.287)
-06-02-2025 14:18:46.086 INFO  --- [com.kaiasia.app.core.MainRestController ] - MsgFromClient_Receive:ApiRequest(header=ApiHeader(reqType=REQUEST, api=CUSTOMER_API, apiKey=custinfoq51klfoni1ezxl5f2ckpfx671, channel=API, location=PC/IOS, requestAPI=FE API, requestNode=node 01, duration=null, priority=1, context=null, synasyn=false), body={command=GET_ENQUIRY, enquiry={authenType=getCUSTINFO, sessionId=b3ad02c2-7ecf-41a6-befe-f319795991a8, customerID=281692}, status=OK}, _reqId=null, _rejectCounter=null, _sendTime=null, _command=null, _authenType=null, _timeOut=null)
-06-02-2025 14:18:46.094 DEBUG --- [com.kaiasia.app.register.ServiceRegister] - Execute method validate for AuthenType: VALIDATE_getCUSTINFO
-06-02-2025 14:18:46.172 INFO  --- [com.kaiasia.app.core.ValidateImpl       ] - 000 OK
-06-02-2025 14:18:46.172 INFO  --- [com.kaiasia.app.core.MainRestController ] - 1738826326172000_0000_1a5247852caf4ae3907c5b1cd6f713bc#[API-BEGIN]
-06-02-2025 14:18:46.215 INFO  --- [com.kaiasia.app.core.dao.APIDaoManager  ] - InsertAPIReqs()1738826326172000_0000_1a5247852caf4ae3907c5b1cd6f713bc#BEGIN
-06-02-2025 14:18:46.445 INFO  --- [com.kaiasia.app.core.dao.APIDaoManager  ] - InsertAPIReqs()1738826326172000_0000_1a5247852caf4ae3907c5b1cd6f713bc#END
-06-02-2025 14:18:46.475 INFO  --- [com.kaiasia.app.core.ProcessService     ] - 1738826326172000_0000_1a5247852caf4ae3907c5b1cd6f713bc##pushApiReqToQueue#Duration:303
-06-02-2025 14:18:46.942 INFO  --- [com.kaiasia.app.core.ProcessThread      ] - checkTimeInQueue: 0
-06-02-2025 14:18:46.942 DEBUG --- [com.kaiasia.app.core.ProcessImpl        ] - received msg: ApiRequest(header=ApiHeader(reqType=REQUEST, api=CUSTOMER_API, apiKey=custinfoq51klfoni1ezxl5f2ckpfx671, channel=API, location=PC/IOS, requestAPI=FE API, requestNode=node 01, duration=null, priority=1, context=null, synasyn=false), body={command=GET_ENQUIRY, enquiry={authenType=getCUSTINFO, sessionId=b3ad02c2-7ecf-41a6-befe-f319795991a8, customerID=281692}, status=OK}, _reqId=1738826326172000_0000_1a5247852caf4ae3907c5b1cd6f713bc, _rejectCounter=null, _sendTime=null, _command=null, _authenType=null, _timeOut=null)
-06-02-2025 14:18:46.943 DEBUG --- [com.kaiasia.app.register.ServiceRegister] - Execute method AuthenType: getCUSTINFO
-06-02-2025 14:18:46.944 INFO  --- [ms.apiclient.client.common.ApiCallClient] - CustomerInfo-b3ad02c2-7ecf-41a6-befe-f319795991a8-1738826326943#begin call api AUTH_API
-06-02-2025 14:18:47.464 INFO  --- [ms.apiclient.client.common.ApiCallClient] - CustomerInfo-b3ad02c2-7ecf-41a6-befe-f319795991a8-1738826326943#end call api AUTH_API
-06-02-2025 14:18:47.495 ERROR --- [com.kaiasia.app.service.customer.service.CustomerService] - CustomerInfo-b3ad02c2-7ecf-41a6-befe-f319795991a8-1738826326943 #After call Auth-1:ApiError(code=801, desc=Session b3ad02c2-7ecf-41a6-befe-f319795991a8 not exist)
-06-02-2025 14:18:47.549 INFO  --- [com.kaiasia.app.core.ProcessThread      ] - 1738826326172000_0000_1a5247852caf4ae3907c5b1cd6f713bc#saveResponse#Duration: 54
-06-02-2025 14:18:47.643 INFO  --- [com.kaiasia.app.core.MainRestController ] - 1738826326172000_0000_1a5247852caf4ae3907c5b1cd6f713bc##END
-06-02-2025 14:18:47.643 INFO  --- [com.kaiasia.app.core.MainRestController ] - 1738826326172000_0000_1a5247852caf4ae3907c5b1cd6f713bc#MsgFromClient_Response:ApiResponse(header=ApiHeader(reqType=RESPONSE, api=CUSTOMER_API, apiKey=custinfoq51klfoni1ezxl5f2ckpfx671, channel=API, location=PC/IOS, requestAPI=FE API, requestNode=node 01, duration=1305, priority=1, context=null, synasyn=false), body={status=FAILE}, error=ApiError(code=801, desc=Session b3ad02c2-7ecf-41a6-befe-f319795991a8 not exist))#Total time: 1557
-06-02-2025 14:26:20.843 INFO  --- [com.kaiasia.app.AppApplication          ] - Starting AppApplication using Java 1.8.0_191 on DESKTOP-RJMUS47 with PID 2712 (D:\TT\Bank\customer_api\target\classes started by Truong in D:\TT\Bank\customer_api)
-06-02-2025 14:26:20.846 DEBUG --- [com.kaiasia.app.AppApplication          ] - Running with Spring Boot v2.7.2, Spring v5.3.22
-06-02-2025 14:26:20.847 INFO  --- [com.kaiasia.app.AppApplication          ] - No active profile set, falling back to 1 default profile: "default"
-06-02-2025 14:26:23.838 DEBUG --- [com.kaiasia.app.register.ServiceRegister] - Found 1 classes with annotation SeabService
-06-02-2025 14:26:24.833 INFO  --- [com.kaiasia.app.AppApplication          ] - Started AppApplication in 4.606 seconds (JVM running for 5.646)
-06-02-2025 14:26:39.079 INFO  --- [com.kaiasia.app.core.MainRestController ] - MsgFromClient_Receive:ApiRequest(header=ApiHeader(reqType=REQUEST, api=CUSTOMER_API, apiKey=custinfoq51klfoni1ezxl5f2ckpfx671, channel=API, location=PC/IOS, requestAPI=FE API, requestNode=node 01, duration=null, priority=1, context=null, synasyn=false), body={command=GET_ENQUIRY, enquiry={authenType=getCUSTINFO, sessionId=b3ad02c2-7ecf-41a6-befe-f319795991a8, customerID=281692}, status=OK}, _reqId=null, _rejectCounter=null, _sendTime=null, _command=null, _authenType=null, _timeOut=null)
-06-02-2025 14:26:39.086 DEBUG --- [com.kaiasia.app.register.ServiceRegister] - Execute method validate for AuthenType: VALIDATE_getCUSTINFO
-06-02-2025 14:26:39.167 INFO  --- [com.kaiasia.app.core.ValidateImpl       ] - 000 OK
-06-02-2025 14:26:39.167 INFO  --- [com.kaiasia.app.core.MainRestController ] - 1738826799167000_0000_146c7f53043b4a4182c1f568f5205748#[API-BEGIN]
-06-02-2025 14:26:39.190 INFO  --- [com.kaiasia.app.core.dao.APIDaoManager  ] - InsertAPIReqs()1738826799167000_0000_146c7f53043b4a4182c1f568f5205748#BEGIN
-06-02-2025 14:26:39.427 INFO  --- [com.kaiasia.app.core.dao.APIDaoManager  ] - InsertAPIReqs()1738826799167000_0000_146c7f53043b4a4182c1f568f5205748#END
-06-02-2025 14:26:39.452 INFO  --- [com.kaiasia.app.core.ProcessService     ] - 1738826799167000_0000_146c7f53043b4a4182c1f568f5205748##pushApiReqToQueue#Duration:285
-06-02-2025 14:26:39.983 INFO  --- [com.kaiasia.app.core.ProcessThread      ] - checkTimeInQueue: 0
-06-02-2025 14:26:39.984 DEBUG --- [com.kaiasia.app.core.ProcessImpl        ] - received msg: ApiRequest(header=ApiHeader(reqType=REQUEST, api=CUSTOMER_API, apiKey=custinfoq51klfoni1ezxl5f2ckpfx671, channel=API, location=PC/IOS, requestAPI=FE API, requestNode=node 01, duration=null, priority=1, context=null, synasyn=false), body={command=GET_ENQUIRY, enquiry={authenType=getCUSTINFO, sessionId=b3ad02c2-7ecf-41a6-befe-f319795991a8, customerID=281692}, status=OK}, _reqId=1738826799167000_0000_146c7f53043b4a4182c1f568f5205748, _rejectCounter=null, _sendTime=null, _command=null, _authenType=null, _timeOut=null)
-06-02-2025 14:26:39.984 DEBUG --- [com.kaiasia.app.register.ServiceRegister] - Execute method AuthenType: getCUSTINFO
-06-02-2025 14:26:40.868 INFO  --- [ms.apiclient.client.common.ApiCallClient] - CustomerInfo-b3ad02c2-7ecf-41a6-befe-f319795991a8-1738826799984#begin call api T24_UTIL_API
-06-02-2025 14:26:41.353 INFO  --- [ms.apiclient.client.common.ApiCallClient] - CustomerInfo-b3ad02c2-7ecf-41a6-befe-f319795991a8-1738826799984#end call api T24_UTIL_API
-06-02-2025 14:26:41.384 WARN  --- [com.kaiasia.app.service.customer.service.CustomerService] - 281692Vu Van Phai
-06-02-2025 14:26:41.385 ERROR --- [com.kaiasia.app.service.customer.service.CustomerService] - Error while caching customer info: ms.apiclient.model.ApiResponse cannot be cast to java.lang.String
-06-02-2025 14:26:41.447 INFO  --- [com.kaiasia.app.core.ProcessThread      ] - 1738826799167000_0000_146c7f53043b4a4182c1f568f5205748#saveResponse#Duration: 62
-06-02-2025 14:26:41.581 INFO  --- [com.kaiasia.app.core.MainRestController ] - 1738826799167000_0000_146c7f53043b4a4182c1f568f5205748##END
-06-02-2025 14:26:41.581 INFO  --- [com.kaiasia.app.core.MainRestController ] - 1738826799167000_0000_146c7f53043b4a4182c1f568f5205748#MsgFromClient_Response:ApiResponse(header=ApiHeader(reqType=RESPONSE, api=CUSTOMER_API, apiKey=custinfoq51klfoni1ezxl5f2ckpfx671, channel=API, location=PC/IOS, requestAPI=FE API, requestNode=node 01, duration=2196, priority=1, context=null, synasyn=false), body={enquiry={country=VN, address=Hai Duong, legalDocName=CCCD, legalId=00121235478, language=VN, customerName=Vu Van Phai, customerStatus=ACTIVE, legalExpDate=null, customerType=IND, phone=0123456789, customerID=281692, company=VN100001, email=phai.vu@gmail.com}, status=OK}, error=null)#Total time: 2502
-06-02-2025 14:32:09.740 INFO  --- [com.kaiasia.app.AppApplication          ] - Starting AppApplication using Java 1.8.0_191 on DESKTOP-RJMUS47 with PID 8148 (D:\TT\Bank\customer_api\target\classes started by Truong in D:\TT\Bank\customer_api)
-06-02-2025 14:32:09.743 DEBUG --- [com.kaiasia.app.AppApplication          ] - Running with Spring Boot v2.7.2, Spring v5.3.22
-06-02-2025 14:32:09.743 INFO  --- [com.kaiasia.app.AppApplication          ] - No active profile set, falling back to 1 default profile: "default"
-06-02-2025 14:32:12.973 DEBUG --- [com.kaiasia.app.register.ServiceRegister] - Found 1 classes with annotation SeabService
-06-02-2025 14:32:13.989 INFO  --- [com.kaiasia.app.AppApplication          ] - Started AppApplication in 4.819 seconds (JVM running for 5.763)
-06-02-2025 14:32:20.371 INFO  --- [com.kaiasia.app.core.MainRestController ] - MsgFromClient_Receive:ApiRequest(header=ApiHeader(reqType=REQUEST, api=CUSTOMER_API, apiKey=custinfoq51klfoni1ezxl5f2ckpfx671, channel=API, location=PC/IOS, requestAPI=FE API, requestNode=node 01, duration=null, priority=1, context=null, synasyn=false), body={command=GET_ENQUIRY, enquiry={authenType=getCUSTINFO, sessionId=b3ad02c2-7ecf-41a6-befe-f319795991a8, customerID=281692}, status=OK}, _reqId=null, _rejectCounter=null, _sendTime=null, _command=null, _authenType=null, _timeOut=null)
-06-02-2025 14:32:20.379 DEBUG --- [com.kaiasia.app.register.ServiceRegister] - Execute method validate for AuthenType: VALIDATE_getCUSTINFO
-06-02-2025 14:32:20.465 INFO  --- [com.kaiasia.app.core.ValidateImpl       ] - 000 OK
-06-02-2025 14:32:20.465 INFO  --- [com.kaiasia.app.core.MainRestController ] - 1738827140465000_0000_c0fe6fdea4bd4ccf81d55523cb2cadcf#[API-BEGIN]
-06-02-2025 14:32:20.489 INFO  --- [com.kaiasia.app.core.dao.APIDaoManager  ] - InsertAPIReqs()1738827140465000_0000_c0fe6fdea4bd4ccf81d55523cb2cadcf#BEGIN
-06-02-2025 14:32:20.725 INFO  --- [com.kaiasia.app.core.dao.APIDaoManager  ] - InsertAPIReqs()1738827140465000_0000_c0fe6fdea4bd4ccf81d55523cb2cadcf#END
-06-02-2025 14:32:20.750 INFO  --- [com.kaiasia.app.core.ProcessService     ] - 1738827140465000_0000_c0fe6fdea4bd4ccf81d55523cb2cadcf##pushApiReqToQueue#Duration:285
-06-02-2025 14:32:21.573 INFO  --- [com.kaiasia.app.core.ProcessThread      ] - checkTimeInQueue: 0
-06-02-2025 14:32:21.573 DEBUG --- [com.kaiasia.app.core.ProcessImpl        ] - received msg: ApiRequest(header=ApiHeader(reqType=REQUEST, api=CUSTOMER_API, apiKey=custinfoq51klfoni1ezxl5f2ckpfx671, channel=API, location=PC/IOS, requestAPI=FE API, requestNode=node 01, duration=null, priority=1, context=null, synasyn=false), body={command=GET_ENQUIRY, enquiry={authenType=getCUSTINFO, sessionId=b3ad02c2-7ecf-41a6-befe-f319795991a8, customerID=281692}, status=OK}, _reqId=1738827140465000_0000_c0fe6fdea4bd4ccf81d55523cb2cadcf, _rejectCounter=null, _sendTime=null, _command=null, _authenType=null, _timeOut=null)
-06-02-2025 14:32:21.573 DEBUG --- [com.kaiasia.app.register.ServiceRegister] - Execute method AuthenType: getCUSTINFO
-06-02-2025 14:32:22.393 INFO  --- [ms.apiclient.client.common.ApiCallClient] - CustomerInfo-b3ad02c2-7ecf-41a6-befe-f319795991a8-1738827141574#begin call api T24_UTIL_API
-06-02-2025 14:32:22.887 INFO  --- [ms.apiclient.client.common.ApiCallClient] - CustomerInfo-b3ad02c2-7ecf-41a6-befe-f319795991a8-1738827141574#end call api T24_UTIL_API
-06-02-2025 14:32:22.921 WARN  --- [com.kaiasia.app.service.customer.service.CustomerService] - 281692Vu Van Phai
-06-02-2025 14:32:22.955 INFO  --- [com.kaiasia.app.service.customer.service.CustomerService] - Customer info cached with key: CustomerInfo:b3ad02c2-7ecf-41a6-befe-f319795991a8:281692
-06-02-2025 14:32:23.009 INFO  --- [com.kaiasia.app.core.ProcessThread      ] - 1738827140465000_0000_c0fe6fdea4bd4ccf81d55523cb2cadcf#saveResponse#Duration: 54
-06-02-2025 14:32:23.059 INFO  --- [com.kaiasia.app.core.MainRestController ] - 1738827140465000_0000_c0fe6fdea4bd4ccf81d55523cb2cadcf##END
-06-02-2025 14:32:23.059 INFO  --- [com.kaiasia.app.core.MainRestController ] - 1738827140465000_0000_c0fe6fdea4bd4ccf81d55523cb2cadcf#MsgFromClient_Response:ApiResponse(header=ApiHeader(reqType=RESPONSE, api=CUSTOMER_API, apiKey=custinfoq51klfoni1ezxl5f2ckpfx671, channel=API, location=PC/IOS, requestAPI=FE API, requestNode=node 01, duration=2469, priority=1, context=null, synasyn=false), body={enquiry={country=VN, address=Hai Duong, legalDocName=CCCD, legalId=00121235478, language=VN, customerName=Vu Van Phai, customerStatus=ACTIVE, legalExpDate=null, customerType=IND, phone=0123456789, customerID=281692, company=VN100001, email=phai.vu@gmail.com}, status=OK}, error=null)#Total time: 2688
+07-02-2025 01:38:22.826 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.TransactionSystemException: Could not roll back JPA transaction; nested exception is org.hibernate.TransactionException: Unable to rollback against JDBC Connection
+	at org.springframework.orm.jpa.JpaTransactionManager.doRollback(JpaTransactionManager.java:593)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processRollback(AbstractPlatformTransactionManager.java:835)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.rollback(AbstractPlatformTransactionManager.java:809)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.completeTransactionAfterThrowing(TransactionAspectSupport.java:672)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.hibernate.TransactionException: Unable to rollback against JDBC Connection
+	at org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor.rollback(AbstractLogicalConnectionImplementor.java:127)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.rollback(JdbcResourceLocalTransactionCoordinatorImpl.java:304)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.rollback(TransactionImpl.java:142)
+	at org.springframework.orm.jpa.JpaTransactionManager.doRollback(JpaTransactionManager.java:589)
+	... 11 common frames omitted
+Caused by: java.sql.SQLException: Connection is closed
+	at com.zaxxer.hikari.pool.ProxyConnection$ClosedConnection.lambda$getClosedConnection$0(ProxyConnection.java:515)
+	at com.sun.proxy.$Proxy85.rollback(Unknown Source)
+	at com.zaxxer.hikari.pool.ProxyConnection.rollback(ProxyConnection.java:396)
+	at com.zaxxer.hikari.pool.HikariProxyConnection.rollback(HikariProxyConnection.java)
+	at org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor.rollback(AbstractLogicalConnectionImplementor.java:121)
+	... 14 common frames omitted
+07-02-2025 01:38:53.170 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to acquire JDBC Connection
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.hibernate.exception.JDBCConnectionException: Unable to acquire JDBC Connection
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:48)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:37)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:111)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getPhysicalConnection(LogicalConnectionManagedImpl.java:138)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getConnectionForTransactionManagement(LogicalConnectionManagedImpl.java:276)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.begin(LogicalConnectionManagedImpl.java:284)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.begin(JdbcResourceLocalTransactionCoordinatorImpl.java:246)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.begin(TransactionImpl.java:83)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.beginTransaction(HibernateJpaDialect.java:164)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:421)
+	... 11 common frames omitted
+Caused by: java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 30013ms.
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:696)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:197)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:162)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.internal.NonContextualJdbcConnectionAccess.obtainConnection(NonContextualJdbcConnectionAccess.java:38)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:108)
+	... 18 common frames omitted
+Caused by: org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:883)
+	at org.postgresql.jdbc.PgConnection.setNetworkTimeout(PgConnection.java:1620)
+	at com.zaxxer.hikari.pool.PoolBase.setNetworkTimeout(PoolBase.java:566)
+	at com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:173)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:186)
+	... 23 common frames omitted
+07-02-2025 01:39:23.477 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to acquire JDBC Connection
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.hibernate.exception.JDBCConnectionException: Unable to acquire JDBC Connection
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:48)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:37)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:111)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getPhysicalConnection(LogicalConnectionManagedImpl.java:138)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getConnectionForTransactionManagement(LogicalConnectionManagedImpl.java:276)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.begin(LogicalConnectionManagedImpl.java:284)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.begin(JdbcResourceLocalTransactionCoordinatorImpl.java:246)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.begin(TransactionImpl.java:83)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.beginTransaction(HibernateJpaDialect.java:164)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:421)
+	... 11 common frames omitted
+Caused by: java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 30000ms.
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:696)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:197)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:162)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.internal.NonContextualJdbcConnectionAccess.obtainConnection(NonContextualJdbcConnectionAccess.java:38)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:108)
+	... 18 common frames omitted
+Caused by: org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:883)
+	at org.postgresql.jdbc.PgConnection.setNetworkTimeout(PgConnection.java:1620)
+	at com.zaxxer.hikari.pool.PoolBase.setNetworkTimeout(PoolBase.java:566)
+	at com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:173)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:186)
+	... 23 common frames omitted
+07-02-2025 01:39:53.781 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to acquire JDBC Connection
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.hibernate.exception.JDBCConnectionException: Unable to acquire JDBC Connection
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:48)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:37)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:111)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getPhysicalConnection(LogicalConnectionManagedImpl.java:138)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getConnectionForTransactionManagement(LogicalConnectionManagedImpl.java:276)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.begin(LogicalConnectionManagedImpl.java:284)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.begin(JdbcResourceLocalTransactionCoordinatorImpl.java:246)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.begin(TransactionImpl.java:83)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.beginTransaction(HibernateJpaDialect.java:164)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:421)
+	... 11 common frames omitted
+Caused by: java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 30001ms.
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:696)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:197)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:162)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.internal.NonContextualJdbcConnectionAccess.obtainConnection(NonContextualJdbcConnectionAccess.java:38)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:108)
+	... 18 common frames omitted
+Caused by: org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:883)
+	at org.postgresql.jdbc.PgConnection.setNetworkTimeout(PgConnection.java:1620)
+	at com.zaxxer.hikari.pool.PoolBase.setNetworkTimeout(PoolBase.java:566)
+	at com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:173)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:186)
+	... 23 common frames omitted
+07-02-2025 01:39:54.083 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.hibernate.internal.SessionFactoryImpl.validateNotClosed(SessionFactoryImpl.java:547)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:636)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:158)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.createNativeEntityManager(AbstractEntityManagerFactoryBean.java:585)
+	at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:487)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:734)
+	at com.sun.proxy.$Proxy86.createNativeEntityManager(Unknown Source)
+	at org.springframework.orm.jpa.JpaTransactionManager.createEntityManagerForTransaction(JpaTransactionManager.java:485)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:410)
+	... 11 common frames omitted
+07-02-2025 01:39:54.383 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.hibernate.internal.SessionFactoryImpl.validateNotClosed(SessionFactoryImpl.java:547)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:636)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:158)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.createNativeEntityManager(AbstractEntityManagerFactoryBean.java:585)
+	at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:487)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:734)
+	at com.sun.proxy.$Proxy86.createNativeEntityManager(Unknown Source)
+	at org.springframework.orm.jpa.JpaTransactionManager.createEntityManagerForTransaction(JpaTransactionManager.java:485)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:410)
+	... 11 common frames omitted
+07-02-2025 01:39:54.684 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.hibernate.internal.SessionFactoryImpl.validateNotClosed(SessionFactoryImpl.java:547)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:636)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:158)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.createNativeEntityManager(AbstractEntityManagerFactoryBean.java:585)
+	at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:487)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:734)
+	at com.sun.proxy.$Proxy86.createNativeEntityManager(Unknown Source)
+	at org.springframework.orm.jpa.JpaTransactionManager.createEntityManagerForTransaction(JpaTransactionManager.java:485)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:410)
+	... 11 common frames omitted
+07-02-2025 01:39:54.985 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.hibernate.internal.SessionFactoryImpl.validateNotClosed(SessionFactoryImpl.java:547)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:636)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:158)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.createNativeEntityManager(AbstractEntityManagerFactoryBean.java:585)
+	at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:487)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:734)
+	at com.sun.proxy.$Proxy86.createNativeEntityManager(Unknown Source)
+	at org.springframework.orm.jpa.JpaTransactionManager.createEntityManagerForTransaction(JpaTransactionManager.java:485)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:410)
+	... 11 common frames omitted
+07-02-2025 01:39:55.286 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.hibernate.internal.SessionFactoryImpl.validateNotClosed(SessionFactoryImpl.java:547)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:636)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:158)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.createNativeEntityManager(AbstractEntityManagerFactoryBean.java:585)
+	at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:487)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:734)
+	at com.sun.proxy.$Proxy86.createNativeEntityManager(Unknown Source)
+	at org.springframework.orm.jpa.JpaTransactionManager.createEntityManagerForTransaction(JpaTransactionManager.java:485)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:410)
+	... 11 common frames omitted
+07-02-2025 01:39:55.586 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.hibernate.internal.SessionFactoryImpl.validateNotClosed(SessionFactoryImpl.java:547)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:636)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:158)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.createNativeEntityManager(AbstractEntityManagerFactoryBean.java:585)
+	at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:487)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:734)
+	at com.sun.proxy.$Proxy86.createNativeEntityManager(Unknown Source)
+	at org.springframework.orm.jpa.JpaTransactionManager.createEntityManagerForTransaction(JpaTransactionManager.java:485)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:410)
+	... 11 common frames omitted
+07-02-2025 01:39:55.887 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.hibernate.internal.SessionFactoryImpl.validateNotClosed(SessionFactoryImpl.java:547)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:636)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:158)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.createNativeEntityManager(AbstractEntityManagerFactoryBean.java:585)
+	at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:487)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:734)
+	at com.sun.proxy.$Proxy86.createNativeEntityManager(Unknown Source)
+	at org.springframework.orm.jpa.JpaTransactionManager.createEntityManagerForTransaction(JpaTransactionManager.java:485)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:410)
+	... 11 common frames omitted
+07-02-2025 01:39:56.188 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.hibernate.internal.SessionFactoryImpl.validateNotClosed(SessionFactoryImpl.java:547)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:636)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:158)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.createNativeEntityManager(AbstractEntityManagerFactoryBean.java:585)
+	at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:487)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:734)
+	at com.sun.proxy.$Proxy86.createNativeEntityManager(Unknown Source)
+	at org.springframework.orm.jpa.JpaTransactionManager.createEntityManagerForTransaction(JpaTransactionManager.java:485)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:410)
+	... 11 common frames omitted
+07-02-2025 01:39:56.488 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.hibernate.internal.SessionFactoryImpl.validateNotClosed(SessionFactoryImpl.java:547)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:636)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:158)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.createNativeEntityManager(AbstractEntityManagerFactoryBean.java:585)
+	at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:487)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:734)
+	at com.sun.proxy.$Proxy86.createNativeEntityManager(Unknown Source)
+	at org.springframework.orm.jpa.JpaTransactionManager.createEntityManagerForTransaction(JpaTransactionManager.java:485)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:410)
+	... 11 common frames omitted
+07-02-2025 01:39:56.789 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.hibernate.internal.SessionFactoryImpl.validateNotClosed(SessionFactoryImpl.java:547)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:636)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:158)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.createNativeEntityManager(AbstractEntityManagerFactoryBean.java:585)
+	at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:487)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:734)
+	at com.sun.proxy.$Proxy86.createNativeEntityManager(Unknown Source)
+	at org.springframework.orm.jpa.JpaTransactionManager.createEntityManagerForTransaction(JpaTransactionManager.java:485)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:410)
+	... 11 common frames omitted
+07-02-2025 01:39:57.090 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.hibernate.internal.SessionFactoryImpl.validateNotClosed(SessionFactoryImpl.java:547)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:636)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:158)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.createNativeEntityManager(AbstractEntityManagerFactoryBean.java:585)
+	at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:487)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:734)
+	at com.sun.proxy.$Proxy86.createNativeEntityManager(Unknown Source)
+	at org.springframework.orm.jpa.JpaTransactionManager.createEntityManagerForTransaction(JpaTransactionManager.java:485)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:410)
+	... 11 common frames omitted
+07-02-2025 01:39:57.391 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.hibernate.internal.SessionFactoryImpl.validateNotClosed(SessionFactoryImpl.java:547)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:636)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:158)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.createNativeEntityManager(AbstractEntityManagerFactoryBean.java:585)
+	at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:487)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:734)
+	at com.sun.proxy.$Proxy86.createNativeEntityManager(Unknown Source)
+	at org.springframework.orm.jpa.JpaTransactionManager.createEntityManagerForTransaction(JpaTransactionManager.java:485)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:410)
+	... 11 common frames omitted
+07-02-2025 01:39:57.692 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.hibernate.internal.SessionFactoryImpl.validateNotClosed(SessionFactoryImpl.java:547)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:636)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:158)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.createNativeEntityManager(AbstractEntityManagerFactoryBean.java:585)
+	at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:487)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:734)
+	at com.sun.proxy.$Proxy86.createNativeEntityManager(Unknown Source)
+	at org.springframework.orm.jpa.JpaTransactionManager.createEntityManagerForTransaction(JpaTransactionManager.java:485)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:410)
+	... 11 common frames omitted
+07-02-2025 01:39:57.992 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.hibernate.internal.SessionFactoryImpl.validateNotClosed(SessionFactoryImpl.java:547)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:636)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:158)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.createNativeEntityManager(AbstractEntityManagerFactoryBean.java:585)
+	at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:487)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:734)
+	at com.sun.proxy.$Proxy86.createNativeEntityManager(Unknown Source)
+	at org.springframework.orm.jpa.JpaTransactionManager.createEntityManagerForTransaction(JpaTransactionManager.java:485)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:410)
+	... 11 common frames omitted
+07-02-2025 01:39:58.293 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.hibernate.internal.SessionFactoryImpl.validateNotClosed(SessionFactoryImpl.java:547)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:636)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:158)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.createNativeEntityManager(AbstractEntityManagerFactoryBean.java:585)
+	at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:487)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:734)
+	at com.sun.proxy.$Proxy86.createNativeEntityManager(Unknown Source)
+	at org.springframework.orm.jpa.JpaTransactionManager.createEntityManagerForTransaction(JpaTransactionManager.java:485)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:410)
+	... 11 common frames omitted
+07-02-2025 01:39:58.594 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.hibernate.internal.SessionFactoryImpl.validateNotClosed(SessionFactoryImpl.java:547)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:636)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:158)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.createNativeEntityManager(AbstractEntityManagerFactoryBean.java:585)
+	at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:487)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:734)
+	at com.sun.proxy.$Proxy86.createNativeEntityManager(Unknown Source)
+	at org.springframework.orm.jpa.JpaTransactionManager.createEntityManagerForTransaction(JpaTransactionManager.java:485)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:410)
+	... 11 common frames omitted
+07-02-2025 01:39:58.895 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.hibernate.internal.SessionFactoryImpl.validateNotClosed(SessionFactoryImpl.java:547)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:636)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:158)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.createNativeEntityManager(AbstractEntityManagerFactoryBean.java:585)
+	at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:487)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:734)
+	at com.sun.proxy.$Proxy86.createNativeEntityManager(Unknown Source)
+	at org.springframework.orm.jpa.JpaTransactionManager.createEntityManagerForTransaction(JpaTransactionManager.java:485)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:410)
+	... 11 common frames omitted
+07-02-2025 01:39:59.196 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.hibernate.internal.SessionFactoryImpl.validateNotClosed(SessionFactoryImpl.java:547)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:636)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:158)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.createNativeEntityManager(AbstractEntityManagerFactoryBean.java:585)
+	at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:487)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:734)
+	at com.sun.proxy.$Proxy86.createNativeEntityManager(Unknown Source)
+	at org.springframework.orm.jpa.JpaTransactionManager.createEntityManagerForTransaction(JpaTransactionManager.java:485)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:410)
+	... 11 common frames omitted
+07-02-2025 01:39:59.497 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.hibernate.internal.SessionFactoryImpl.validateNotClosed(SessionFactoryImpl.java:547)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:636)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:158)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.createNativeEntityManager(AbstractEntityManagerFactoryBean.java:585)
+	at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:487)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:734)
+	at com.sun.proxy.$Proxy86.createNativeEntityManager(Unknown Source)
+	at org.springframework.orm.jpa.JpaTransactionManager.createEntityManagerForTransaction(JpaTransactionManager.java:485)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:410)
+	... 11 common frames omitted
+07-02-2025 01:39:59.797 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.hibernate.internal.SessionFactoryImpl.validateNotClosed(SessionFactoryImpl.java:547)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:636)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:158)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.createNativeEntityManager(AbstractEntityManagerFactoryBean.java:585)
+	at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:487)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:734)
+	at com.sun.proxy.$Proxy86.createNativeEntityManager(Unknown Source)
+	at org.springframework.orm.jpa.JpaTransactionManager.createEntityManagerForTransaction(JpaTransactionManager.java:485)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:410)
+	... 11 common frames omitted
+07-02-2025 01:40:00.098 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.hibernate.internal.SessionFactoryImpl.validateNotClosed(SessionFactoryImpl.java:547)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:636)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:158)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.createNativeEntityManager(AbstractEntityManagerFactoryBean.java:585)
+	at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:487)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:734)
+	at com.sun.proxy.$Proxy86.createNativeEntityManager(Unknown Source)
+	at org.springframework.orm.jpa.JpaTransactionManager.createEntityManagerForTransaction(JpaTransactionManager.java:485)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:410)
+	... 11 common frames omitted
+07-02-2025 01:40:00.399 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.hibernate.internal.SessionFactoryImpl.validateNotClosed(SessionFactoryImpl.java:547)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:636)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:158)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.createNativeEntityManager(AbstractEntityManagerFactoryBean.java:585)
+	at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:487)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:734)
+	at com.sun.proxy.$Proxy86.createNativeEntityManager(Unknown Source)
+	at org.springframework.orm.jpa.JpaTransactionManager.createEntityManagerForTransaction(JpaTransactionManager.java:485)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:410)
+	... 11 common frames omitted
+07-02-2025 01:40:00.699 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.hibernate.internal.SessionFactoryImpl.validateNotClosed(SessionFactoryImpl.java:547)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:636)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:158)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.createNativeEntityManager(AbstractEntityManagerFactoryBean.java:585)
+	at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:487)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:734)
+	at com.sun.proxy.$Proxy86.createNativeEntityManager(Unknown Source)
+	at org.springframework.orm.jpa.JpaTransactionManager.createEntityManagerForTransaction(JpaTransactionManager.java:485)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:410)
+	... 11 common frames omitted
+07-02-2025 01:40:01.000 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.hibernate.internal.SessionFactoryImpl.validateNotClosed(SessionFactoryImpl.java:547)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:636)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:158)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.createNativeEntityManager(AbstractEntityManagerFactoryBean.java:585)
+	at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:487)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:734)
+	at com.sun.proxy.$Proxy86.createNativeEntityManager(Unknown Source)
+	at org.springframework.orm.jpa.JpaTransactionManager.createEntityManagerForTransaction(JpaTransactionManager.java:485)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:410)
+	... 11 common frames omitted
+07-02-2025 01:40:01.300 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.hibernate.internal.SessionFactoryImpl.validateNotClosed(SessionFactoryImpl.java:547)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:636)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:158)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.createNativeEntityManager(AbstractEntityManagerFactoryBean.java:585)
+	at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:487)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:734)
+	at com.sun.proxy.$Proxy86.createNativeEntityManager(Unknown Source)
+	at org.springframework.orm.jpa.JpaTransactionManager.createEntityManagerForTransaction(JpaTransactionManager.java:485)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:410)
+	... 11 common frames omitted
+07-02-2025 01:40:01.602 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.hibernate.internal.SessionFactoryImpl.validateNotClosed(SessionFactoryImpl.java:547)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:636)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:158)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.createNativeEntityManager(AbstractEntityManagerFactoryBean.java:585)
+	at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:487)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:734)
+	at com.sun.proxy.$Proxy86.createNativeEntityManager(Unknown Source)
+	at org.springframework.orm.jpa.JpaTransactionManager.createEntityManagerForTransaction(JpaTransactionManager.java:485)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:410)
+	... 11 common frames omitted
+07-02-2025 01:40:01.903 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.hibernate.internal.SessionFactoryImpl.validateNotClosed(SessionFactoryImpl.java:547)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:636)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:158)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.createNativeEntityManager(AbstractEntityManagerFactoryBean.java:585)
+	at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:487)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:734)
+	at com.sun.proxy.$Proxy86.createNativeEntityManager(Unknown Source)
+	at org.springframework.orm.jpa.JpaTransactionManager.createEntityManagerForTransaction(JpaTransactionManager.java:485)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:410)
+	... 11 common frames omitted
+07-02-2025 01:40:02.205 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.hibernate.internal.SessionFactoryImpl.validateNotClosed(SessionFactoryImpl.java:547)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:636)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:158)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.createNativeEntityManager(AbstractEntityManagerFactoryBean.java:585)
+	at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:487)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:734)
+	at com.sun.proxy.$Proxy86.createNativeEntityManager(Unknown Source)
+	at org.springframework.orm.jpa.JpaTransactionManager.createEntityManagerForTransaction(JpaTransactionManager.java:485)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:410)
+	... 11 common frames omitted
+07-02-2025 01:40:02.505 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.hibernate.internal.SessionFactoryImpl.validateNotClosed(SessionFactoryImpl.java:547)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:636)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:158)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.createNativeEntityManager(AbstractEntityManagerFactoryBean.java:585)
+	at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:487)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:734)
+	at com.sun.proxy.$Proxy86.createNativeEntityManager(Unknown Source)
+	at org.springframework.orm.jpa.JpaTransactionManager.createEntityManagerForTransaction(JpaTransactionManager.java:485)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:410)
+	... 11 common frames omitted
+07-02-2025 01:40:02.806 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.hibernate.internal.SessionFactoryImpl.validateNotClosed(SessionFactoryImpl.java:547)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:636)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:158)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.createNativeEntityManager(AbstractEntityManagerFactoryBean.java:585)
+	at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:487)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:734)
+	at com.sun.proxy.$Proxy86.createNativeEntityManager(Unknown Source)
+	at org.springframework.orm.jpa.JpaTransactionManager.createEntityManagerForTransaction(JpaTransactionManager.java:485)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:410)
+	... 11 common frames omitted
+07-02-2025 01:40:03.106 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.hibernate.internal.SessionFactoryImpl.validateNotClosed(SessionFactoryImpl.java:547)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:636)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:158)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.createNativeEntityManager(AbstractEntityManagerFactoryBean.java:585)
+	at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:487)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:734)
+	at com.sun.proxy.$Proxy86.createNativeEntityManager(Unknown Source)
+	at org.springframework.orm.jpa.JpaTransactionManager.createEntityManagerForTransaction(JpaTransactionManager.java:485)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:410)
+	... 11 common frames omitted
+07-02-2025 01:40:03.408 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.hibernate.internal.SessionFactoryImpl.validateNotClosed(SessionFactoryImpl.java:547)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:636)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:158)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.createNativeEntityManager(AbstractEntityManagerFactoryBean.java:585)
+	at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:487)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:734)
+	at com.sun.proxy.$Proxy86.createNativeEntityManager(Unknown Source)
+	at org.springframework.orm.jpa.JpaTransactionManager.createEntityManagerForTransaction(JpaTransactionManager.java:485)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:410)
+	... 11 common frames omitted
+07-02-2025 01:40:03.709 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.hibernate.internal.SessionFactoryImpl.validateNotClosed(SessionFactoryImpl.java:547)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:636)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:158)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.createNativeEntityManager(AbstractEntityManagerFactoryBean.java:585)
+	at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:487)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:734)
+	at com.sun.proxy.$Proxy86.createNativeEntityManager(Unknown Source)
+	at org.springframework.orm.jpa.JpaTransactionManager.createEntityManagerForTransaction(JpaTransactionManager.java:485)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:410)
+	... 11 common frames omitted
+07-02-2025 01:40:04.011 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.hibernate.internal.SessionFactoryImpl.validateNotClosed(SessionFactoryImpl.java:547)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:636)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:158)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.createNativeEntityManager(AbstractEntityManagerFactoryBean.java:585)
+	at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:487)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:734)
+	at com.sun.proxy.$Proxy86.createNativeEntityManager(Unknown Source)
+	at org.springframework.orm.jpa.JpaTransactionManager.createEntityManagerForTransaction(JpaTransactionManager.java:485)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:410)
+	... 11 common frames omitted
+07-02-2025 01:40:04.313 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.hibernate.internal.SessionFactoryImpl.validateNotClosed(SessionFactoryImpl.java:547)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:636)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:158)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.createNativeEntityManager(AbstractEntityManagerFactoryBean.java:585)
+	at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:487)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:734)
+	at com.sun.proxy.$Proxy86.createNativeEntityManager(Unknown Source)
+	at org.springframework.orm.jpa.JpaTransactionManager.createEntityManagerForTransaction(JpaTransactionManager.java:485)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:410)
+	... 11 common frames omitted
+07-02-2025 01:40:04.618 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.hibernate.internal.SessionFactoryImpl.validateNotClosed(SessionFactoryImpl.java:547)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:636)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:158)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.createNativeEntityManager(AbstractEntityManagerFactoryBean.java:585)
+	at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:487)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:734)
+	at com.sun.proxy.$Proxy86.createNativeEntityManager(Unknown Source)
+	at org.springframework.orm.jpa.JpaTransactionManager.createEntityManagerForTransaction(JpaTransactionManager.java:485)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:410)
+	... 11 common frames omitted
+07-02-2025 01:40:04.921 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.hibernate.internal.SessionFactoryImpl.validateNotClosed(SessionFactoryImpl.java:547)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:636)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:158)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.createNativeEntityManager(AbstractEntityManagerFactoryBean.java:585)
+	at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:487)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:734)
+	at com.sun.proxy.$Proxy86.createNativeEntityManager(Unknown Source)
+	at org.springframework.orm.jpa.JpaTransactionManager.createEntityManagerForTransaction(JpaTransactionManager.java:485)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:410)
+	... 11 common frames omitted
+07-02-2025 01:40:05.221 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.hibernate.internal.SessionFactoryImpl.validateNotClosed(SessionFactoryImpl.java:547)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:636)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:158)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.createNativeEntityManager(AbstractEntityManagerFactoryBean.java:585)
+	at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:487)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:734)
+	at com.sun.proxy.$Proxy86.createNativeEntityManager(Unknown Source)
+	at org.springframework.orm.jpa.JpaTransactionManager.createEntityManagerForTransaction(JpaTransactionManager.java:485)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:410)
+	... 11 common frames omitted
+07-02-2025 13:32:05.274 INFO  --- [com.kaiasia.app.AppApplication          ] - Starting AppApplication using Java 1.8.0_191 on DESKTOP-RJMUS47 with PID 16452 (D:\TT\Bank\customer_api\target\classes started by Truong in D:\TT\Bank\customer_api)
+07-02-2025 13:32:05.276 DEBUG --- [com.kaiasia.app.AppApplication          ] - Running with Spring Boot v2.7.2, Spring v5.3.22
+07-02-2025 13:32:05.277 INFO  --- [com.kaiasia.app.AppApplication          ] - No active profile set, falling back to 1 default profile: "default"
+07-02-2025 13:32:08.673 DEBUG --- [com.kaiasia.app.register.ServiceRegister] - Found 1 classes with annotation SeabService
+07-02-2025 13:32:09.679 INFO  --- [com.kaiasia.app.AppApplication          ] - Started AppApplication in 5.013 seconds (JVM running for 6.039)
+07-02-2025 13:33:06.552 INFO  --- [com.kaiasia.app.core.MainRestController ] - MsgFromClient_Receive:ApiRequest(header=ApiHeader(reqType=REQUEST, api=CUSTOMER_API, apiKey=custinfoq51klfoni1ezxl5f2ckpfx671, channel=API, location=PC/IOS, requestAPI=FE API, requestNode=node 01, duration=null, priority=1, context=null, synasyn=false), body={command=GET_ENQUIRY, enquiry={authenType=getCUSTINFO, sessionId=b3ad02c2-7ecf-41a6-befe-f319795991a8, customerID=281692}, status=OK}, _reqId=null, _rejectCounter=null, _sendTime=null, _command=null, _authenType=null, _timeOut=null)
+07-02-2025 13:33:06.559 DEBUG --- [com.kaiasia.app.register.ServiceRegister] - Execute method validate for AuthenType: VALIDATE_getCUSTINFO
+07-02-2025 13:33:06.629 INFO  --- [com.kaiasia.app.core.ValidateImpl       ] - 000 OK
+07-02-2025 13:33:06.630 INFO  --- [com.kaiasia.app.core.MainRestController ] - 1738909986629000_0000_d653b1a18b9947859f6ed6bf36fb7595#[API-BEGIN]
+07-02-2025 13:33:06.669 INFO  --- [com.kaiasia.app.core.dao.APIDaoManager  ] - InsertAPIReqs()1738909986629000_0000_d653b1a18b9947859f6ed6bf36fb7595#BEGIN
+07-02-2025 13:33:06.893 INFO  --- [com.kaiasia.app.core.dao.APIDaoManager  ] - InsertAPIReqs()1738909986629000_0000_d653b1a18b9947859f6ed6bf36fb7595#END
+07-02-2025 13:33:06.916 INFO  --- [com.kaiasia.app.core.ProcessService     ] - 1738909986629000_0000_d653b1a18b9947859f6ed6bf36fb7595##pushApiReqToQueue#Duration:286
+07-02-2025 13:33:07.145 INFO  --- [com.kaiasia.app.core.ProcessThread      ] - checkTimeInQueue: 0
+07-02-2025 13:33:07.146 DEBUG --- [com.kaiasia.app.core.ProcessImpl        ] - received msg: ApiRequest(header=ApiHeader(reqType=REQUEST, api=CUSTOMER_API, apiKey=custinfoq51klfoni1ezxl5f2ckpfx671, channel=API, location=PC/IOS, requestAPI=FE API, requestNode=node 01, duration=null, priority=1, context=null, synasyn=false), body={command=GET_ENQUIRY, enquiry={authenType=getCUSTINFO, sessionId=b3ad02c2-7ecf-41a6-befe-f319795991a8, customerID=281692}, status=OK}, _reqId=1738909986629000_0000_d653b1a18b9947859f6ed6bf36fb7595, _rejectCounter=null, _sendTime=null, _command=null, _authenType=null, _timeOut=null)
+07-02-2025 13:33:07.146 DEBUG --- [com.kaiasia.app.register.ServiceRegister] - Execute method AuthenType: getCUSTINFO
+07-02-2025 13:33:07.147 INFO  --- [ms.apiclient.client.common.ApiCallClient] - CustomerInfo-b3ad02c2-7ecf-41a6-befe-f319795991a8-1738909987146#begin call api AUTH_API
+07-02-2025 13:33:07.831 INFO  --- [ms.apiclient.client.common.ApiCallClient] - CustomerInfo-b3ad02c2-7ecf-41a6-befe-f319795991a8-1738909987146#end call api AUTH_API
+07-02-2025 13:33:07.853 ERROR --- [com.kaiasia.app.service.customer.service.CustomerService] - CustomerInfo-b3ad02c2-7ecf-41a6-befe-f319795991a8-1738909987146 #After call Auth-1:ApiError(code=801, desc=Session b3ad02c2-7ecf-41a6-befe-f319795991a8 not exist)
+07-02-2025 13:33:07.903 INFO  --- [com.kaiasia.app.core.MainRestController ] - 1738909986629000_0000_d653b1a18b9947859f6ed6bf36fb7595##END
+07-02-2025 13:33:07.903 INFO  --- [com.kaiasia.app.core.MainRestController ] - 1738909986629000_0000_d653b1a18b9947859f6ed6bf36fb7595#MsgFromClient_Response:ApiResponse(header=ApiHeader(reqType=RESPONSE, api=CUSTOMER_API, apiKey=custinfoq51klfoni1ezxl5f2ckpfx671, channel=API, location=PC/IOS, requestAPI=FE API, requestNode=node 01, duration=1208, priority=1, context=null, synasyn=false), body={status=FAILE}, error=ApiError(code=801, desc=Session b3ad02c2-7ecf-41a6-befe-f319795991a8 not exist))#Total time: 1351
+07-02-2025 13:33:07.911 INFO  --- [com.kaiasia.app.core.ProcessThread      ] - 1738909986629000_0000_d653b1a18b9947859f6ed6bf36fb7595#saveResponse#Duration: 58
+07-02-2025 13:34:14.953 INFO  --- [com.kaiasia.app.core.MainRestController ] - MsgFromClient_Receive:ApiRequest(header=ApiHeader(reqType=REQUEST, api=CUSTOMER_API, apiKey=custinfoq51klfoni1ezxl5f2ckpfx671, channel=API, location=PC/IOS, requestAPI=FE API, requestNode=node 01, duration=null, priority=1, context=null, synasyn=false), body={command=GET_ENQUIRY, enquiry={authenType=getCUSTINFO, sessionId=b3ad02c, customerID=281692}, status=OK}, _reqId=null, _rejectCounter=null, _sendTime=null, _command=null, _authenType=null, _timeOut=null)
+07-02-2025 13:34:14.954 DEBUG --- [com.kaiasia.app.register.ServiceRegister] - Execute method validate for AuthenType: VALIDATE_getCUSTINFO
+07-02-2025 13:34:14.954 INFO  --- [com.kaiasia.app.core.ValidateImpl       ] - 000 OK
+07-02-2025 13:34:14.954 INFO  --- [com.kaiasia.app.core.MainRestController ] - 1738910054954000_0000_c72c8d44c0144097b423033267f33a2a#[API-BEGIN]
+07-02-2025 13:34:14.954 INFO  --- [com.kaiasia.app.core.dao.APIDaoManager  ] - InsertAPIReqs()1738910054954000_0000_c72c8d44c0144097b423033267f33a2a#BEGIN
+07-02-2025 13:34:15.174 INFO  --- [com.kaiasia.app.core.dao.APIDaoManager  ] - InsertAPIReqs()1738910054954000_0000_c72c8d44c0144097b423033267f33a2a#END
+07-02-2025 13:34:15.201 INFO  --- [com.kaiasia.app.core.ProcessService     ] - 1738910054954000_0000_c72c8d44c0144097b423033267f33a2a##pushApiReqToQueue#Duration:247
+07-02-2025 13:34:15.734 INFO  --- [com.kaiasia.app.core.ProcessThread      ] - checkTimeInQueue: 0
+07-02-2025 13:34:15.735 DEBUG --- [com.kaiasia.app.core.ProcessImpl        ] - received msg: ApiRequest(header=ApiHeader(reqType=REQUEST, api=CUSTOMER_API, apiKey=custinfoq51klfoni1ezxl5f2ckpfx671, channel=API, location=PC/IOS, requestAPI=FE API, requestNode=node 01, duration=null, priority=1, context=null, synasyn=false), body={command=GET_ENQUIRY, enquiry={authenType=getCUSTINFO, sessionId=b3ad02c, customerID=281692}, status=OK}, _reqId=1738910054954000_0000_c72c8d44c0144097b423033267f33a2a, _rejectCounter=null, _sendTime=null, _command=null, _authenType=null, _timeOut=null)
+07-02-2025 13:34:15.735 DEBUG --- [com.kaiasia.app.register.ServiceRegister] - Execute method AuthenType: getCUSTINFO
+07-02-2025 13:34:15.735 INFO  --- [ms.apiclient.client.common.ApiCallClient] - CustomerInfo-b3ad02c-1738910055735#begin call api AUTH_API
+07-02-2025 13:34:16.189 INFO  --- [ms.apiclient.client.common.ApiCallClient] - CustomerInfo-b3ad02c-1738910055735#end call api AUTH_API
+07-02-2025 13:34:16.189 ERROR --- [com.kaiasia.app.service.customer.service.CustomerService] - CustomerInfo-b3ad02c-1738910055735 #After call Auth-1:ApiError(code=801, desc=Session b3ad02c not exist)
+07-02-2025 13:34:16.240 INFO  --- [com.kaiasia.app.core.ProcessThread      ] - 1738910054954000_0000_c72c8d44c0144097b423033267f33a2a#saveResponse#Duration: 51
+07-02-2025 13:34:16.415 INFO  --- [com.kaiasia.app.core.MainRestController ] - 1738910054954000_0000_c72c8d44c0144097b423033267f33a2a##END
+07-02-2025 13:34:16.415 INFO  --- [com.kaiasia.app.core.MainRestController ] - 1738910054954000_0000_c72c8d44c0144097b423033267f33a2a#MsgFromClient_Response:ApiResponse(header=ApiHeader(reqType=RESPONSE, api=CUSTOMER_API, apiKey=custinfoq51klfoni1ezxl5f2ckpfx671, channel=API, location=PC/IOS, requestAPI=FE API, requestNode=node 01, duration=1235, priority=1, context=null, synasyn=false), body={status=FAILE}, error=ApiError(code=801, desc=Session b3ad02c not exist))#Total time: 1462
+07-02-2025 13:35:04.695 INFO  --- [com.kaiasia.app.core.MainRestController ] - MsgFromClient_Receive:ApiRequest(header=ApiHeader(reqType=REQUEST, api=CUSTOMER_API, apiKey=custinfoq51klfoni1ezxl5f2ckpfx671, channel=API, location=PC/IOS, requestAPI=FE API, requestNode=node 01, duration=null, priority=1, context=null, synasyn=false), body={command=GET_ENQUIRY, enquiry={authenType=getCUSTINFO, sessionId=281692_1738891689646_42c4ceccb6da4943b82423d89c41c750, customerID=281692}, status=OK}, _reqId=null, _rejectCounter=null, _sendTime=null, _command=null, _authenType=null, _timeOut=null)
+07-02-2025 13:35:04.695 DEBUG --- [com.kaiasia.app.register.ServiceRegister] - Execute method validate for AuthenType: VALIDATE_getCUSTINFO
+07-02-2025 13:35:04.696 INFO  --- [com.kaiasia.app.core.ValidateImpl       ] - 000 OK
+07-02-2025 13:35:04.696 INFO  --- [com.kaiasia.app.core.MainRestController ] - 1738910104696000_0000_2e9d7d89bf004ea782afbfcf93a1815f#[API-BEGIN]
+07-02-2025 13:35:04.718 INFO  --- [com.kaiasia.app.core.dao.APIDaoManager  ] - InsertAPIReqs()1738910104696000_0000_2e9d7d89bf004ea782afbfcf93a1815f#BEGIN
+07-02-2025 13:35:04.926 INFO  --- [com.kaiasia.app.core.dao.APIDaoManager  ] - InsertAPIReqs()1738910104696000_0000_2e9d7d89bf004ea782afbfcf93a1815f#END
+07-02-2025 13:35:04.950 INFO  --- [com.kaiasia.app.core.ProcessService     ] - 1738910104696000_0000_2e9d7d89bf004ea782afbfcf93a1815f##pushApiReqToQueue#Duration:254
+07-02-2025 13:35:05.442 INFO  --- [com.kaiasia.app.core.MainRestController ] - 1738910104696000_0000_2e9d7d89bf004ea782afbfcf93a1815f##END
+07-02-2025 13:35:05.442 INFO  --- [com.kaiasia.app.core.MainRestController ] - 1738910104696000_0000_2e9d7d89bf004ea782afbfcf93a1815f#MsgFromClient_Response:ApiResponse(header=ApiHeader(reqType=RESPONSE, api=CUSTOMER_API, apiKey=custinfoq51klfoni1ezxl5f2ckpfx671, channel=API, location=PC/IOS, requestAPI=FE API, requestNode=node 01, duration=-18620546, priority=1, context=null, synasyn=false), body={status=FAILE}, error=ApiError(code=333, desc=Invalid authenType))#Total time: 747
+07-02-2025 13:45:20.506 INFO  --- [com.kaiasia.app.AppApplication          ] - Starting AppApplication using Java 1.8.0_191 on DESKTOP-RJMUS47 with PID 15912 (D:\TT\Bank\customer_api\target\classes started by Truong in D:\TT\Bank\customer_api)
+07-02-2025 13:45:20.508 DEBUG --- [com.kaiasia.app.AppApplication          ] - Running with Spring Boot v2.7.2, Spring v5.3.22
+07-02-2025 13:45:20.509 INFO  --- [com.kaiasia.app.AppApplication          ] - No active profile set, falling back to 1 default profile: "default"
+07-02-2025 13:45:23.805 DEBUG --- [com.kaiasia.app.register.ServiceRegister] - Found 1 classes with annotation SeabService
+07-02-2025 13:45:24.880 INFO  --- [com.kaiasia.app.AppApplication          ] - Started AppApplication in 4.896 seconds (JVM running for 5.8)
+07-02-2025 13:45:28.805 INFO  --- [com.kaiasia.app.core.MainRestController ] - MsgFromClient_Receive:ApiRequest(header=ApiHeader(reqType=REQUEST, api=CUSTOMER_API, apiKey=custinfoq51klfoni1ezxl5f2ckpfx671, channel=API, location=PC/IOS, requestAPI=FE API, requestNode=node 01, duration=null, priority=1, context=null, synasyn=false), body={command=GET_ENQUIRY, enquiry={authenType=getCUSTINFO, sessionId=281692_1738891689646_42c4ceccb6da4943b82423d89c41c750, customerID=281692}, status=OK}, _reqId=null, _rejectCounter=null, _sendTime=null, _command=null, _authenType=null, _timeOut=null)
+07-02-2025 13:45:28.811 DEBUG --- [com.kaiasia.app.register.ServiceRegister] - Execute method validate for AuthenType: VALIDATE_getCUSTINFO
+07-02-2025 13:45:28.878 INFO  --- [com.kaiasia.app.core.ValidateImpl       ] - 000 OK
+07-02-2025 13:45:28.878 INFO  --- [com.kaiasia.app.core.MainRestController ] - 1738910728878000_0000_cbbac39c1c124291b44060e3d7f0cc4e#[API-BEGIN]
+07-02-2025 13:45:28.892 INFO  --- [com.kaiasia.app.core.dao.APIDaoManager  ] - InsertAPIReqs()1738910728878000_0000_cbbac39c1c124291b44060e3d7f0cc4e#BEGIN
+07-02-2025 13:45:29.389 INFO  --- [com.kaiasia.app.core.dao.APIDaoManager  ] - InsertAPIReqs()1738910728878000_0000_cbbac39c1c124291b44060e3d7f0cc4e#END
+07-02-2025 13:45:29.413 INFO  --- [com.kaiasia.app.core.ProcessService     ] - 1738910728878000_0000_cbbac39c1c124291b44060e3d7f0cc4e##pushApiReqToQueue#Duration:535
+07-02-2025 13:45:30.004 INFO  --- [com.kaiasia.app.core.ProcessThread      ] - checkTimeInQueue: 0
+07-02-2025 13:45:30.004 DEBUG --- [com.kaiasia.app.core.ProcessImpl        ] - received msg: ApiRequest(header=ApiHeader(reqType=REQUEST, api=CUSTOMER_API, apiKey=custinfoq51klfoni1ezxl5f2ckpfx671, channel=API, location=PC/IOS, requestAPI=FE API, requestNode=node 01, duration=null, priority=1, context=null, synasyn=false), body={command=GET_ENQUIRY, enquiry={authenType=getCUSTINFO, sessionId=281692_1738891689646_42c4ceccb6da4943b82423d89c41c750, customerID=281692}, status=OK}, _reqId=1738910728878000_0000_cbbac39c1c124291b44060e3d7f0cc4e, _rejectCounter=null, _sendTime=null, _command=null, _authenType=null, _timeOut=null)
+07-02-2025 13:45:30.005 DEBUG --- [com.kaiasia.app.register.ServiceRegister] - Execute method AuthenType: getCUSTINFO
+07-02-2025 13:45:30.006 INFO  --- [ms.apiclient.client.common.ApiCallClient] - CustomerInfo-281692_1738891689646_42c4ceccb6da4943b82423d89c41c750-1738910730005#begin call api AUTH_API
+07-02-2025 13:45:31.900 INFO  --- [ms.apiclient.client.common.ApiCallClient] - CustomerInfo-281692_1738891689646_42c4ceccb6da4943b82423d89c41c750-1738910730005#end call api AUTH_API
+07-02-2025 13:45:32.665 INFO  --- [ms.apiclient.client.common.ApiCallClient] - CustomerInfo-281692_1738891689646_42c4ceccb6da4943b82423d89c41c750-1738910730005#begin call api T24_UTIL_API
+07-02-2025 13:45:33.361 INFO  --- [ms.apiclient.client.common.ApiCallClient] - CustomerInfo-281692_1738891689646_42c4ceccb6da4943b82423d89c41c750-1738910730005#end call api T24_UTIL_API
+07-02-2025 13:45:33.364 WARN  --- [com.kaiasia.app.service.customer.service.CustomerService] - 281692Vu Van Phai
+07-02-2025 13:45:33.396 INFO  --- [com.kaiasia.app.service.customer.service.CustomerService] - Customer info cached with key: CustomerInfo:281692_1738891689646_42c4ceccb6da4943b82423d89c41c750:281692
+07-02-2025 13:45:33.649 INFO  --- [com.kaiasia.app.core.MainRestController ] - 1738910728878000_0000_cbbac39c1c124291b44060e3d7f0cc4e##END
+07-02-2025 13:45:33.649 INFO  --- [com.kaiasia.app.core.MainRestController ] - 1738910728878000_0000_cbbac39c1c124291b44060e3d7f0cc4e#MsgFromClient_Response:ApiResponse(header=ApiHeader(reqType=RESPONSE, api=CUSTOMER_API, apiKey=custinfoq51klfoni1ezxl5f2ckpfx671, channel=API, location=PC/IOS, requestAPI=FE API, requestNode=node 01, duration=4506, priority=1, context=null, synasyn=false), body={enquiry={country=VN, address=Hai Duong, legalDocName=CCCD, legalId=00121235478, language=VN, customerName=Vu Van Phai, customerStatus=ACTIVE, legalExpDate=null, customerType=IND, phone=0123456789, customerID=281692, company=VN100001, email=phai.vu@gmail.com}, status=OK}, error=null)#Total time: 4844
+07-02-2025 13:45:33.739 INFO  --- [com.kaiasia.app.core.ProcessThread      ] - 1738910728878000_0000_cbbac39c1c124291b44060e3d7f0cc4e#saveResponse#Duration: 343
+07-02-2025 13:47:38.142 INFO  --- [com.kaiasia.app.core.MainRestController ] - MsgFromClient_Receive:ApiRequest(header=ApiHeader(reqType=REQUEST, api=CUSTOMER_API, apiKey=custinfoq51klfoni1ezxl5f2ckpfx671, channel=API, location=PC/IOS, requestAPI=FE API, requestNode=node 01, duration=null, priority=1, context=null, synasyn=false), body={command=GET_ENQUIRY, enquiry={authenType=getCUSTINFO, sessionId=281692_1738891689646_42c4ceccb6da4943b82423d89c41c750, customerID=281692}, status=OK}, _reqId=null, _rejectCounter=null, _sendTime=null, _command=null, _authenType=null, _timeOut=null)
+07-02-2025 13:47:38.143 DEBUG --- [com.kaiasia.app.register.ServiceRegister] - Execute method validate for AuthenType: VALIDATE_getCUSTINFO
+07-02-2025 13:47:38.143 INFO  --- [com.kaiasia.app.core.ValidateImpl       ] - 000 OK
+07-02-2025 13:47:38.143 INFO  --- [com.kaiasia.app.core.MainRestController ] - 1738910858143000_0000_fad56c2878e14946ab96adb0b4844dcf#[API-BEGIN]
+07-02-2025 13:47:38.166 INFO  --- [com.kaiasia.app.core.dao.APIDaoManager  ] - InsertAPIReqs()1738910858143000_0000_fad56c2878e14946ab96adb0b4844dcf#BEGIN
+07-02-2025 13:47:38.381 INFO  --- [com.kaiasia.app.core.dao.APIDaoManager  ] - InsertAPIReqs()1738910858143000_0000_fad56c2878e14946ab96adb0b4844dcf#END
+07-02-2025 13:47:38.404 INFO  --- [com.kaiasia.app.core.ProcessService     ] - 1738910858143000_0000_fad56c2878e14946ab96adb0b4844dcf##pushApiReqToQueue#Duration:261
+07-02-2025 13:47:38.878 INFO  --- [com.kaiasia.app.core.ProcessThread      ] - checkTimeInQueue: 0
+07-02-2025 13:47:38.878 DEBUG --- [com.kaiasia.app.core.ProcessImpl        ] - received msg: ApiRequest(header=ApiHeader(reqType=REQUEST, api=CUSTOMER_API, apiKey=custinfoq51klfoni1ezxl5f2ckpfx671, channel=API, location=PC/IOS, requestAPI=FE API, requestNode=node 01, duration=null, priority=1, context=null, synasyn=false), body={command=GET_ENQUIRY, enquiry={authenType=getCUSTINFO, sessionId=281692_1738891689646_42c4ceccb6da4943b82423d89c41c750, customerID=281692}, status=OK}, _reqId=1738910858143000_0000_fad56c2878e14946ab96adb0b4844dcf, _rejectCounter=null, _sendTime=null, _command=null, _authenType=null, _timeOut=null)
+07-02-2025 13:47:38.878 DEBUG --- [com.kaiasia.app.register.ServiceRegister] - Execute method AuthenType: getCUSTINFO
+07-02-2025 13:47:38.878 INFO  --- [ms.apiclient.client.common.ApiCallClient] - CustomerInfo-281692_1738891689646_42c4ceccb6da4943b82423d89c41c750-1738910858878#begin call api AUTH_API
+07-02-2025 13:47:39.515 INFO  --- [ms.apiclient.client.common.ApiCallClient] - CustomerInfo-281692_1738891689646_42c4ceccb6da4943b82423d89c41c750-1738910858878#end call api AUTH_API
+07-02-2025 13:47:39.545 ERROR --- [com.kaiasia.app.service.customer.service.CustomerService] - Error while accessing Redis: java.lang.String cannot be cast to ms.apiclient.model.ApiResponse
+07-02-2025 13:47:39.545 INFO  --- [ms.apiclient.client.common.ApiCallClient] - CustomerInfo-281692_1738891689646_42c4ceccb6da4943b82423d89c41c750-1738910858878#begin call api T24_UTIL_API
+07-02-2025 13:47:39.997 INFO  --- [ms.apiclient.client.common.ApiCallClient] - CustomerInfo-281692_1738891689646_42c4ceccb6da4943b82423d89c41c750-1738910858878#end call api T24_UTIL_API
+07-02-2025 13:47:39.999 WARN  --- [com.kaiasia.app.service.customer.service.CustomerService] - 281692Vu Van Phai
+07-02-2025 13:47:40.026 INFO  --- [com.kaiasia.app.service.customer.service.CustomerService] - Customer info cached with key: CustomerInfo:281692_1738891689646_42c4ceccb6da4943b82423d89c41c750:281692
+07-02-2025 13:47:40.074 INFO  --- [com.kaiasia.app.core.MainRestController ] - 1738910858143000_0000_fad56c2878e14946ab96adb0b4844dcf##END
+07-02-2025 13:47:40.074 INFO  --- [com.kaiasia.app.core.MainRestController ] - 1738910858143000_0000_fad56c2878e14946ab96adb0b4844dcf#MsgFromClient_Response:ApiResponse(header=ApiHeader(reqType=RESPONSE, api=CUSTOMER_API, apiKey=custinfoq51klfoni1ezxl5f2ckpfx671, channel=API, location=PC/IOS, requestAPI=FE API, requestNode=node 01, duration=1884, priority=1, context=null, synasyn=false), body={enquiry={country=VN, address=Hai Duong, legalDocName=CCCD, legalId=00121235478, language=VN, customerName=Vu Van Phai, customerStatus=ACTIVE, legalExpDate=null, customerType=IND, phone=0123456789, customerID=281692, company=VN100001, email=phai.vu@gmail.com}, status=OK}, error=null)#Total time: 1932
+07-02-2025 13:47:40.077 INFO  --- [com.kaiasia.app.core.ProcessThread      ] - 1738910858143000_0000_fad56c2878e14946ab96adb0b4844dcf#saveResponse#Duration: 50

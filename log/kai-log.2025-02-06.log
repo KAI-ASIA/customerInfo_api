@@ -1,0 +1,92 @@
+06-02-2025 14:16:48.824 INFO  --- [com.kaiasia.app.AppApplication          ] - Starting AppApplication using Java 1.8.0_191 on DESKTOP-RJMUS47 with PID 7444 (D:\TT\Bank\customer_api\target\classes started by Truong in D:\TT\Bank\customer_api)
+06-02-2025 14:16:48.832 DEBUG --- [com.kaiasia.app.AppApplication          ] - Running with Spring Boot v2.7.2, Spring v5.3.22
+06-02-2025 14:16:48.833 INFO  --- [com.kaiasia.app.AppApplication          ] - No active profile set, falling back to 1 default profile: "default"
+06-02-2025 14:16:52.590 DEBUG --- [com.kaiasia.app.register.ServiceRegister] - Found 1 classes with annotation SeabService
+06-02-2025 14:16:53.937 INFO  --- [com.kaiasia.app.AppApplication          ] - Started AppApplication in 6.007 seconds (JVM running for 7.287)
+06-02-2025 14:18:46.086 INFO  --- [com.kaiasia.app.core.MainRestController ] - MsgFromClient_Receive:ApiRequest(header=ApiHeader(reqType=REQUEST, api=CUSTOMER_API, apiKey=custinfoq51klfoni1ezxl5f2ckpfx671, channel=API, location=PC/IOS, requestAPI=FE API, requestNode=node 01, duration=null, priority=1, context=null, synasyn=false), body={command=GET_ENQUIRY, enquiry={authenType=getCUSTINFO, sessionId=b3ad02c2-7ecf-41a6-befe-f319795991a8, customerID=281692}, status=OK}, _reqId=null, _rejectCounter=null, _sendTime=null, _command=null, _authenType=null, _timeOut=null)
+06-02-2025 14:18:46.094 DEBUG --- [com.kaiasia.app.register.ServiceRegister] - Execute method validate for AuthenType: VALIDATE_getCUSTINFO
+06-02-2025 14:18:46.172 INFO  --- [com.kaiasia.app.core.ValidateImpl       ] - 000 OK
+06-02-2025 14:18:46.172 INFO  --- [com.kaiasia.app.core.MainRestController ] - 1738826326172000_0000_1a5247852caf4ae3907c5b1cd6f713bc#[API-BEGIN]
+06-02-2025 14:18:46.215 INFO  --- [com.kaiasia.app.core.dao.APIDaoManager  ] - InsertAPIReqs()1738826326172000_0000_1a5247852caf4ae3907c5b1cd6f713bc#BEGIN
+06-02-2025 14:18:46.445 INFO  --- [com.kaiasia.app.core.dao.APIDaoManager  ] - InsertAPIReqs()1738826326172000_0000_1a5247852caf4ae3907c5b1cd6f713bc#END
+06-02-2025 14:18:46.475 INFO  --- [com.kaiasia.app.core.ProcessService     ] - 1738826326172000_0000_1a5247852caf4ae3907c5b1cd6f713bc##pushApiReqToQueue#Duration:303
+06-02-2025 14:18:46.942 INFO  --- [com.kaiasia.app.core.ProcessThread      ] - checkTimeInQueue: 0
+06-02-2025 14:18:46.942 DEBUG --- [com.kaiasia.app.core.ProcessImpl        ] - received msg: ApiRequest(header=ApiHeader(reqType=REQUEST, api=CUSTOMER_API, apiKey=custinfoq51klfoni1ezxl5f2ckpfx671, channel=API, location=PC/IOS, requestAPI=FE API, requestNode=node 01, duration=null, priority=1, context=null, synasyn=false), body={command=GET_ENQUIRY, enquiry={authenType=getCUSTINFO, sessionId=b3ad02c2-7ecf-41a6-befe-f319795991a8, customerID=281692}, status=OK}, _reqId=1738826326172000_0000_1a5247852caf4ae3907c5b1cd6f713bc, _rejectCounter=null, _sendTime=null, _command=null, _authenType=null, _timeOut=null)
+06-02-2025 14:18:46.943 DEBUG --- [com.kaiasia.app.register.ServiceRegister] - Execute method AuthenType: getCUSTINFO
+06-02-2025 14:18:46.944 INFO  --- [ms.apiclient.client.common.ApiCallClient] - CustomerInfo-b3ad02c2-7ecf-41a6-befe-f319795991a8-1738826326943#begin call api AUTH_API
+06-02-2025 14:18:47.464 INFO  --- [ms.apiclient.client.common.ApiCallClient] - CustomerInfo-b3ad02c2-7ecf-41a6-befe-f319795991a8-1738826326943#end call api AUTH_API
+06-02-2025 14:18:47.495 ERROR --- [com.kaiasia.app.service.customer.service.CustomerService] - CustomerInfo-b3ad02c2-7ecf-41a6-befe-f319795991a8-1738826326943 #After call Auth-1:ApiError(code=801, desc=Session b3ad02c2-7ecf-41a6-befe-f319795991a8 not exist)
+06-02-2025 14:18:47.549 INFO  --- [com.kaiasia.app.core.ProcessThread      ] - 1738826326172000_0000_1a5247852caf4ae3907c5b1cd6f713bc#saveResponse#Duration: 54
+06-02-2025 14:18:47.643 INFO  --- [com.kaiasia.app.core.MainRestController ] - 1738826326172000_0000_1a5247852caf4ae3907c5b1cd6f713bc##END
+06-02-2025 14:18:47.643 INFO  --- [com.kaiasia.app.core.MainRestController ] - 1738826326172000_0000_1a5247852caf4ae3907c5b1cd6f713bc#MsgFromClient_Response:ApiResponse(header=ApiHeader(reqType=RESPONSE, api=CUSTOMER_API, apiKey=custinfoq51klfoni1ezxl5f2ckpfx671, channel=API, location=PC/IOS, requestAPI=FE API, requestNode=node 01, duration=1305, priority=1, context=null, synasyn=false), body={status=FAILE}, error=ApiError(code=801, desc=Session b3ad02c2-7ecf-41a6-befe-f319795991a8 not exist))#Total time: 1557
+06-02-2025 14:26:20.843 INFO  --- [com.kaiasia.app.AppApplication          ] - Starting AppApplication using Java 1.8.0_191 on DESKTOP-RJMUS47 with PID 2712 (D:\TT\Bank\customer_api\target\classes started by Truong in D:\TT\Bank\customer_api)
+06-02-2025 14:26:20.846 DEBUG --- [com.kaiasia.app.AppApplication          ] - Running with Spring Boot v2.7.2, Spring v5.3.22
+06-02-2025 14:26:20.847 INFO  --- [com.kaiasia.app.AppApplication          ] - No active profile set, falling back to 1 default profile: "default"
+06-02-2025 14:26:23.838 DEBUG --- [com.kaiasia.app.register.ServiceRegister] - Found 1 classes with annotation SeabService
+06-02-2025 14:26:24.833 INFO  --- [com.kaiasia.app.AppApplication          ] - Started AppApplication in 4.606 seconds (JVM running for 5.646)
+06-02-2025 14:26:39.079 INFO  --- [com.kaiasia.app.core.MainRestController ] - MsgFromClient_Receive:ApiRequest(header=ApiHeader(reqType=REQUEST, api=CUSTOMER_API, apiKey=custinfoq51klfoni1ezxl5f2ckpfx671, channel=API, location=PC/IOS, requestAPI=FE API, requestNode=node 01, duration=null, priority=1, context=null, synasyn=false), body={command=GET_ENQUIRY, enquiry={authenType=getCUSTINFO, sessionId=b3ad02c2-7ecf-41a6-befe-f319795991a8, customerID=281692}, status=OK}, _reqId=null, _rejectCounter=null, _sendTime=null, _command=null, _authenType=null, _timeOut=null)
+06-02-2025 14:26:39.086 DEBUG --- [com.kaiasia.app.register.ServiceRegister] - Execute method validate for AuthenType: VALIDATE_getCUSTINFO
+06-02-2025 14:26:39.167 INFO  --- [com.kaiasia.app.core.ValidateImpl       ] - 000 OK
+06-02-2025 14:26:39.167 INFO  --- [com.kaiasia.app.core.MainRestController ] - 1738826799167000_0000_146c7f53043b4a4182c1f568f5205748#[API-BEGIN]
+06-02-2025 14:26:39.190 INFO  --- [com.kaiasia.app.core.dao.APIDaoManager  ] - InsertAPIReqs()1738826799167000_0000_146c7f53043b4a4182c1f568f5205748#BEGIN
+06-02-2025 14:26:39.427 INFO  --- [com.kaiasia.app.core.dao.APIDaoManager  ] - InsertAPIReqs()1738826799167000_0000_146c7f53043b4a4182c1f568f5205748#END
+06-02-2025 14:26:39.452 INFO  --- [com.kaiasia.app.core.ProcessService     ] - 1738826799167000_0000_146c7f53043b4a4182c1f568f5205748##pushApiReqToQueue#Duration:285
+06-02-2025 14:26:39.983 INFO  --- [com.kaiasia.app.core.ProcessThread      ] - checkTimeInQueue: 0
+06-02-2025 14:26:39.984 DEBUG --- [com.kaiasia.app.core.ProcessImpl        ] - received msg: ApiRequest(header=ApiHeader(reqType=REQUEST, api=CUSTOMER_API, apiKey=custinfoq51klfoni1ezxl5f2ckpfx671, channel=API, location=PC/IOS, requestAPI=FE API, requestNode=node 01, duration=null, priority=1, context=null, synasyn=false), body={command=GET_ENQUIRY, enquiry={authenType=getCUSTINFO, sessionId=b3ad02c2-7ecf-41a6-befe-f319795991a8, customerID=281692}, status=OK}, _reqId=1738826799167000_0000_146c7f53043b4a4182c1f568f5205748, _rejectCounter=null, _sendTime=null, _command=null, _authenType=null, _timeOut=null)
+06-02-2025 14:26:39.984 DEBUG --- [com.kaiasia.app.register.ServiceRegister] - Execute method AuthenType: getCUSTINFO
+06-02-2025 14:26:40.868 INFO  --- [ms.apiclient.client.common.ApiCallClient] - CustomerInfo-b3ad02c2-7ecf-41a6-befe-f319795991a8-1738826799984#begin call api T24_UTIL_API
+06-02-2025 14:26:41.353 INFO  --- [ms.apiclient.client.common.ApiCallClient] - CustomerInfo-b3ad02c2-7ecf-41a6-befe-f319795991a8-1738826799984#end call api T24_UTIL_API
+06-02-2025 14:26:41.384 WARN  --- [com.kaiasia.app.service.customer.service.CustomerService] - 281692Vu Van Phai
+06-02-2025 14:26:41.385 ERROR --- [com.kaiasia.app.service.customer.service.CustomerService] - Error while caching customer info: ms.apiclient.model.ApiResponse cannot be cast to java.lang.String
+06-02-2025 14:26:41.447 INFO  --- [com.kaiasia.app.core.ProcessThread      ] - 1738826799167000_0000_146c7f53043b4a4182c1f568f5205748#saveResponse#Duration: 62
+06-02-2025 14:26:41.581 INFO  --- [com.kaiasia.app.core.MainRestController ] - 1738826799167000_0000_146c7f53043b4a4182c1f568f5205748##END
+06-02-2025 14:26:41.581 INFO  --- [com.kaiasia.app.core.MainRestController ] - 1738826799167000_0000_146c7f53043b4a4182c1f568f5205748#MsgFromClient_Response:ApiResponse(header=ApiHeader(reqType=RESPONSE, api=CUSTOMER_API, apiKey=custinfoq51klfoni1ezxl5f2ckpfx671, channel=API, location=PC/IOS, requestAPI=FE API, requestNode=node 01, duration=2196, priority=1, context=null, synasyn=false), body={enquiry={country=VN, address=Hai Duong, legalDocName=CCCD, legalId=00121235478, language=VN, customerName=Vu Van Phai, customerStatus=ACTIVE, legalExpDate=null, customerType=IND, phone=0123456789, customerID=281692, company=VN100001, email=phai.vu@gmail.com}, status=OK}, error=null)#Total time: 2502
+06-02-2025 14:32:09.740 INFO  --- [com.kaiasia.app.AppApplication          ] - Starting AppApplication using Java 1.8.0_191 on DESKTOP-RJMUS47 with PID 8148 (D:\TT\Bank\customer_api\target\classes started by Truong in D:\TT\Bank\customer_api)
+06-02-2025 14:32:09.743 DEBUG --- [com.kaiasia.app.AppApplication          ] - Running with Spring Boot v2.7.2, Spring v5.3.22
+06-02-2025 14:32:09.743 INFO  --- [com.kaiasia.app.AppApplication          ] - No active profile set, falling back to 1 default profile: "default"
+06-02-2025 14:32:12.973 DEBUG --- [com.kaiasia.app.register.ServiceRegister] - Found 1 classes with annotation SeabService
+06-02-2025 14:32:13.989 INFO  --- [com.kaiasia.app.AppApplication          ] - Started AppApplication in 4.819 seconds (JVM running for 5.763)
+06-02-2025 14:32:20.371 INFO  --- [com.kaiasia.app.core.MainRestController ] - MsgFromClient_Receive:ApiRequest(header=ApiHeader(reqType=REQUEST, api=CUSTOMER_API, apiKey=custinfoq51klfoni1ezxl5f2ckpfx671, channel=API, location=PC/IOS, requestAPI=FE API, requestNode=node 01, duration=null, priority=1, context=null, synasyn=false), body={command=GET_ENQUIRY, enquiry={authenType=getCUSTINFO, sessionId=b3ad02c2-7ecf-41a6-befe-f319795991a8, customerID=281692}, status=OK}, _reqId=null, _rejectCounter=null, _sendTime=null, _command=null, _authenType=null, _timeOut=null)
+06-02-2025 14:32:20.379 DEBUG --- [com.kaiasia.app.register.ServiceRegister] - Execute method validate for AuthenType: VALIDATE_getCUSTINFO
+06-02-2025 14:32:20.465 INFO  --- [com.kaiasia.app.core.ValidateImpl       ] - 000 OK
+06-02-2025 14:32:20.465 INFO  --- [com.kaiasia.app.core.MainRestController ] - 1738827140465000_0000_c0fe6fdea4bd4ccf81d55523cb2cadcf#[API-BEGIN]
+06-02-2025 14:32:20.489 INFO  --- [com.kaiasia.app.core.dao.APIDaoManager  ] - InsertAPIReqs()1738827140465000_0000_c0fe6fdea4bd4ccf81d55523cb2cadcf#BEGIN
+06-02-2025 14:32:20.725 INFO  --- [com.kaiasia.app.core.dao.APIDaoManager  ] - InsertAPIReqs()1738827140465000_0000_c0fe6fdea4bd4ccf81d55523cb2cadcf#END
+06-02-2025 14:32:20.750 INFO  --- [com.kaiasia.app.core.ProcessService     ] - 1738827140465000_0000_c0fe6fdea4bd4ccf81d55523cb2cadcf##pushApiReqToQueue#Duration:285
+06-02-2025 14:32:21.573 INFO  --- [com.kaiasia.app.core.ProcessThread      ] - checkTimeInQueue: 0
+06-02-2025 14:32:21.573 DEBUG --- [com.kaiasia.app.core.ProcessImpl        ] - received msg: ApiRequest(header=ApiHeader(reqType=REQUEST, api=CUSTOMER_API, apiKey=custinfoq51klfoni1ezxl5f2ckpfx671, channel=API, location=PC/IOS, requestAPI=FE API, requestNode=node 01, duration=null, priority=1, context=null, synasyn=false), body={command=GET_ENQUIRY, enquiry={authenType=getCUSTINFO, sessionId=b3ad02c2-7ecf-41a6-befe-f319795991a8, customerID=281692}, status=OK}, _reqId=1738827140465000_0000_c0fe6fdea4bd4ccf81d55523cb2cadcf, _rejectCounter=null, _sendTime=null, _command=null, _authenType=null, _timeOut=null)
+06-02-2025 14:32:21.573 DEBUG --- [com.kaiasia.app.register.ServiceRegister] - Execute method AuthenType: getCUSTINFO
+06-02-2025 14:32:22.393 INFO  --- [ms.apiclient.client.common.ApiCallClient] - CustomerInfo-b3ad02c2-7ecf-41a6-befe-f319795991a8-1738827141574#begin call api T24_UTIL_API
+06-02-2025 14:32:22.887 INFO  --- [ms.apiclient.client.common.ApiCallClient] - CustomerInfo-b3ad02c2-7ecf-41a6-befe-f319795991a8-1738827141574#end call api T24_UTIL_API
+06-02-2025 14:32:22.921 WARN  --- [com.kaiasia.app.service.customer.service.CustomerService] - 281692Vu Van Phai
+06-02-2025 14:32:22.955 INFO  --- [com.kaiasia.app.service.customer.service.CustomerService] - Customer info cached with key: CustomerInfo:b3ad02c2-7ecf-41a6-befe-f319795991a8:281692
+06-02-2025 14:32:23.009 INFO  --- [com.kaiasia.app.core.ProcessThread      ] - 1738827140465000_0000_c0fe6fdea4bd4ccf81d55523cb2cadcf#saveResponse#Duration: 54
+06-02-2025 14:32:23.059 INFO  --- [com.kaiasia.app.core.MainRestController ] - 1738827140465000_0000_c0fe6fdea4bd4ccf81d55523cb2cadcf##END
+06-02-2025 14:32:23.059 INFO  --- [com.kaiasia.app.core.MainRestController ] - 1738827140465000_0000_c0fe6fdea4bd4ccf81d55523cb2cadcf#MsgFromClient_Response:ApiResponse(header=ApiHeader(reqType=RESPONSE, api=CUSTOMER_API, apiKey=custinfoq51klfoni1ezxl5f2ckpfx671, channel=API, location=PC/IOS, requestAPI=FE API, requestNode=node 01, duration=2469, priority=1, context=null, synasyn=false), body={enquiry={country=VN, address=Hai Duong, legalDocName=CCCD, legalId=00121235478, language=VN, customerName=Vu Van Phai, customerStatus=ACTIVE, legalExpDate=null, customerType=IND, phone=0123456789, customerID=281692, company=VN100001, email=phai.vu@gmail.com}, status=OK}, error=null)#Total time: 2688
+06-02-2025 16:07:15.959 ERROR --- [com.kaiasia.app.core.job.ApiFetchReqTask] - EXCEPTION FETCH DB: {}
+org.springframework.transaction.TransactionSystemException: Could not roll back JPA transaction; nested exception is org.hibernate.TransactionException: Unable to rollback against JDBC Connection
+	at org.springframework.orm.jpa.JpaTransactionManager.doRollback(JpaTransactionManager.java:593)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processRollback(AbstractPlatformTransactionManager.java:835)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.rollback(AbstractPlatformTransactionManager.java:809)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.completeTransactionAfterThrowing(TransactionAspectSupport.java:672)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kaiasia.app.core.dao.APIDaoManager$$EnhancerBySpringCGLIB$$a23de0f3.fetchAPIReqs(<generated>)
+	at com.kaiasia.app.core.job.ApiFetchReqTask.run(ApiFetchReqTask.java:40)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.hibernate.TransactionException: Unable to rollback against JDBC Connection
+	at org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor.rollback(AbstractLogicalConnectionImplementor.java:127)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.rollback(JdbcResourceLocalTransactionCoordinatorImpl.java:304)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.rollback(TransactionImpl.java:142)
+	at org.springframework.orm.jpa.JpaTransactionManager.doRollback(JpaTransactionManager.java:589)
+	... 11 common frames omitted
+Caused by: java.sql.SQLException: Connection is closed
+	at com.zaxxer.hikari.pool.ProxyConnection$ClosedConnection.lambda$getClosedConnection$0(ProxyConnection.java:515)
+	at com.sun.proxy.$Proxy85.rollback(Unknown Source)
+	at com.zaxxer.hikari.pool.ProxyConnection.rollback(ProxyConnection.java:396)
+	at com.zaxxer.hikari.pool.HikariProxyConnection.rollback(HikariProxyConnection.java)
+	at org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor.rollback(AbstractLogicalConnectionImplementor.java:121)
+	... 14 common frames omitted
